@@ -107,8 +107,8 @@ const links = {
             </div>
           </div>
 
-          <!-- <div class="projGrid">
-            <article class="projCard tilt" data-tilt>
+          <div class="projGrid">
+            <!-- <article class="projCard tilt" data-tilt>
               <div class="projTop">
                 <h3>Hierarchical RL for Adaptive Traffic Signal Control</h3>
                 <span class="projTag">CSE475 · 2-person</span>
@@ -123,7 +123,7 @@ const links = {
               <div class="projBtns">
                 <a class="btn" href="#" onclick="return false;">Project Page (add)</a>
               </div>
-            </article> -->
+            </article>  -->
 
             <article class="projCard tilt" data-tilt>
               <div class="projTop">
@@ -380,7 +380,7 @@ const links = {
       const speedlines = document.getElementById("speedlines");
       function onParallax() {
         const y = window.scrollY || 0;
-        if (speedlines) speedlines.style.transform = `translateY(${y * 0.06}px)`;
+        if (speedlines) speedlines.style.transform = `translate3d(0, ${y * 0.06}px, 0)`;
       }
       window.addEventListener("scroll", onParallax, { passive: true });
       onParallax();
@@ -418,12 +418,25 @@ const links = {
       onHeroScroll();
 
       // Reveal
-      const revealEls = document.querySelectorAll("[data-reveal]");
-      const revealIO = new IntersectionObserver(
-        (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
-        { threshold: 0.16 }
-      );
-      revealEls.forEach((el) => revealIO.observe(el));
+      function setupReveal() {
+        const revealEls = document.querySelectorAll("[data-reveal]");
+        const revealIO = new IntersectionObserver(
+          (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
+          { threshold: 0.16 }
+        );
+        revealEls.forEach((el) => revealIO.observe(el));
+      }
+
+      window.addEventListener("load", () => {
+        document.body.classList.remove("boot");
+        document.body.classList.add("ignite");
+        setTimeout(() => document.body.classList.add("coast"), 900);
+        setTimeout(() => document.body.classList.remove("ignite"), 1200);
+        setTimeout(() => document.body.classList.add("settle"), 2400);
+
+        requestAnimationFrame(setupReveal);
+      });
+
 
       // Hover tilt
       const tiltEls = document.querySelectorAll("[data-tilt]");
@@ -542,6 +555,12 @@ const links = {
         opacity: 0.18;
         z-index: 0;
         mix-blend-mode: overlay;
+      }
+
+      #bgGlow, #speedlines, #noise {
+        transform: translate3d(0,0,0);
+        backface-visibility: hidden;
+        will-change: transform;
       }
 
       .nav {
