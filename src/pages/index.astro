@@ -1,7 +1,7 @@
 ---
 const links = {
   linkedin: "https://www.linkedin.com/in/rajveermogal",
-  github: "https://github.com/YOUR_GITHUB",
+  github: "https://github.com/rajveermogal",
   email: "mailto:rmogal@asu.edu",
 };
 ---
@@ -14,7 +14,7 @@ const links = {
     <title>Rajveer Mogal</title>
     <meta
       name="description"
-      content="Rajveer Mogal — Computer Science Senior @ ASU. Simulation, Distributed Systems, AI/ML."
+      content="Rajveer Mogal — Computer Science Graduate @ ASU. Robotics, Simulation, Embodied AI."
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -26,30 +26,30 @@ const links = {
   </head>
 
   <body class="boot">
-    <!-- background layers -->
+
     <div id="bgStage" aria-hidden="true">
       <div id="bgGlow"></div>
       <div id="speedlines"></div>
       <div id="noise"></div>
     </div>
 
-
     <header class="nav">
       <a class="brand" href="#top">RAJVEER MOGAL</a>
-
       <nav class="navLinks">
         <a class="navLink" href="#projects">Projects</a>
         <a class="navLink" href="#experience">Experience</a>
         <a class="navLink" href="#about">About</a>
         <a class="navLink" href="#contact">Contact</a>
-        <a class="btn btnNeon" href={links.email}>Email</a>
+        <a class="btn btnAccent" href={links.email}>Email</a>
       </nav>
     </header>
 
     <main id="top">
-      <!-- HERO (REVERTED TO OLD WORKING IMPLEMENTATION): staged reveal (Name -> Roles -> Quote) -->
+
+      <!-- HERO: staged reveal (Name → Roles → Quote) -->
       <section class="heroStage" id="heroStage" aria-label="Hero">
         <div class="heroSticky">
+
           <!-- STEP 1 -->
           <div class="heroStep heroStep1">
             <h1 class="heroName">
@@ -57,7 +57,6 @@ const links = {
                 <span class="nameGlow">RAJVEER MOGAL</span>
               </span>
             </h1>
-
             <div class="heroHint" id="heroHint" aria-hidden="true">
               <span class="hintArrow">↓</span>
               <span class="hintText">Scroll</span>
@@ -67,9 +66,8 @@ const links = {
           <!-- STEP 2 -->
           <div class="heroStep heroStep2" data-step="2">
             <div class="heroCard tilt" data-tilt>
-              <div class="heroKicker">COMPUTER SCIENCE SENIOR @ ASU</div>
-              <div class="heroRoles">SIMULATION · DISTRIBUTED SYSTEMS · AI/ML</div>
-
+              <div class="heroKicker">COMPUTER SCIENCE GRADUATE @ ASU</div>
+              <div class="heroRoles">ROBOTICS · SIMULATION · EMBODIED AI</div>
               <div class="heroActions">
                 <a class="iconBtn" href={links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
                 <a class="iconBtn" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub">⌁</a>
@@ -81,27 +79,24 @@ const links = {
           <!-- STEP 3 -->
           <div class="heroStep heroStep3" data-step="3">
             <div class="quotePill tilt" data-tilt>
-              “I build software the way I like my coffee: carefully engineered for consistency.”
+              "I build software the way I like my coffee: carefully engineered for consistency."
             </div>
           </div>
+
         </div>
       </section>
 
-      <!-- PROJECTS (UNCHANGED - KEEP CURRENT) -->
+      <!-- PROJECTS -->
       <section class="section projectsSection" id="projects">
         <div class="projectsBay reveal" data-reveal>
           <div class="projectsHeader">
             <div class="projectsHeaderLeft">
               <h2 class="projectsTitle">Projects</h2>
-              <p class="projectsSub">
-                A few things I’ve built.
-              </p>
+              <p class="projectsSub">A few things I've built.</p>
             </div>
-
             <div class="projectsHeaderRight">
-              <div class="projectsKicker">COMPUTER SCIENCE SENIOR @ ASU</div>
-              <div class="projectsRoles">SIMULATION · DISTRIBUTED SYSTEMS · AI/ML</div>
-
+              <div class="projectsKicker">COMPUTER SCIENCE GRADUATE @ ASU</div>
+              <div class="projectsRoles">ROBOTICS · SIMULATION · EMBODIED AI</div>
               <div class="projectsIcons">
                 <a class="iconBtn" href={links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
                 <a class="iconBtn" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub">⌁</a>
@@ -111,22 +106,6 @@ const links = {
           </div>
 
           <div class="projGrid">
-            <!-- <article class="projCard tilt" data-tilt>
-              <div class="projTop">
-                <h3>Hierarchical RL for Adaptive Traffic Signal Control</h3>
-                <span class="projTag">CSE475 · 2-person</span>
-              </div>
-              <p>
-                Built a custom CityFlow RL environment (3×3 intersections) and trained a DQN agent.
-                Achieved ~75% reduction in total vehicle queue length vs random control with reproducible training + eval.
-              </p>
-              <div class="projMeta">
-                <span class="chip">Python</span><span class="chip">RL</span><span class="chip">Simulation</span><span class="chip">Pipelines</span>
-              </div>
-              <div class="projBtns">
-                <a class="btn" href="#" onclick="return false;">Project Page (add)</a>
-              </div>
-            </article>  -->
 
             <article class="projCard tilt" data-tilt>
               <div class="projTop">
@@ -134,9 +113,9 @@ const links = {
                 <span class="projTag">Personal AI · RAG · 2026</span>
               </div>
               <p>
-               Built a document-aware AI assistant that lets users chat with their PDFs and get answers
-               backed by exact citations (filename + page). Veris retrieves the most relevant passages,
-               applies a confidence gate to avoid hallucinations, and shows “receipts” for every answer.
+                Built a document-aware AI assistant that lets users chat with their PDFs and get answers
+                backed by exact citations (filename + page). Veris retrieves the most relevant passages,
+                applies a confidence gate to avoid hallucinations, and shows "receipts" for every answer.
               </p>
               <div class="projMeta">
                 <span class="chip">Python</span>
@@ -150,15 +129,24 @@ const links = {
               </div>
             </article>
 
-
             <article class="projCard tilt" data-tilt>
               <div class="projTop">
                 <h3>Robotic Grasp Simulation</h3>
                 <span class="projTag">FreeFuse · Internship</span>
               </div>
-              <p>Python simulation modules + distributed validation + profiling to improve reliability, modularity, and performance.</p>
+              <p>
+                Built an embodied AI robotic manipulation system that transformed visual observations
+                into executable grasp actions in simulation. Developed perception-to-action pipelines
+                using Gemma vision models, environmental awareness, grasp planning, and large-scale
+                evaluation workflows in NVIDIA Isaac Sim.
+              </p>
               <div class="projMeta">
-                <span class="chip">Python</span><span class="chip">Distributed</span><span class="chip">Profiling</span><span class="chip">Testing</span>
+                <span class="chip">Python</span>
+                <span class="chip">Isaac Sim</span>
+                <span class="chip">Gemma</span>
+                <span class="chip">Computer Vision</span>
+                <span class="chip">Robotics</span>
+                <span class="chip">Distributed Systems</span>
               </div>
               <div class="projBtns">
                 <a class="btn" href="#" onclick="return false;">Project Page (add)</a>
@@ -172,7 +160,9 @@ const links = {
               </div>
               <p>Modular desktop system for patient registration, tracking, and diagnostic visualization.</p>
               <div class="projMeta">
-                <span class="chip">Java</span><span class="chip">JavaFX</span><span class="chip">Modular Design</span>
+                <span class="chip">Java</span>
+                <span class="chip">JavaFX</span>
+                <span class="chip">Modular Design</span>
               </div>
               <div class="projBtns">
                 <a class="btn" href="#" onclick="return false;">Project Page (add)</a>
@@ -186,17 +176,20 @@ const links = {
               </div>
               <p>Data cleaning + visualization scripts for large datasets; supported workshops and research workflows.</p>
               <div class="projMeta">
-                <span class="chip">Pandas</span><span class="chip">Visualization</span><span class="chip">Research</span>
+                <span class="chip">Pandas</span>
+                <span class="chip">Visualization</span>
+                <span class="chip">Research</span>
               </div>
               <div class="projBtns">
                 <a class="btn" href="#" onclick="return false;">Notes (add)</a>
               </div>
             </article>
+
           </div>
         </div>
       </section>
 
-      <!-- EXPERIENCE (UNCHANGED - KEEP CURRENT) -->
+      <!-- EXPERIENCE -->
       <section class="section" id="experience">
         <div class="sectionHead reveal" data-reveal>
           <h2 class="sectionTitle">Experience</h2>
@@ -249,7 +242,10 @@ const links = {
                 <div class="vTime">Aug 2025 – Present</div>
               </div>
               <div class="vOrg">FreeFuse</div>
-              <div class="vNote">Python simulation modules, distributed validation, performance profiling.</div>
+              <div class="vNote">
+                Built perception-to-action simulation pipelines for robotic grasp planning, environmental awareness,
+                and large-scale evaluation in NVIDIA Isaac Sim.
+              </div>
             </div>
           </article>
 
@@ -288,10 +284,11 @@ const links = {
               <div class="vNote">Mentored 150+ students in programming fundamentals and data structures.</div>
             </div>
           </article>
+
         </div>
       </section>
 
-      <!-- ABOUT (UNCHANGED - KEEP CURRENT) -->
+      <!-- ABOUT -->
       <section class="section" id="about">
         <div class="sectionHead reveal" data-reveal>
           <h2 class="sectionTitle">About</h2>
@@ -300,11 +297,11 @@ const links = {
         <div class="aboutGrid reveal" data-reveal>
           <div class="aboutMain card tilt" data-tilt>
             <p class="aboutText">
-              I’m a Computer Science senior at Arizona State University (GPA 4.0) focused on simulation-driven engineering,
-              distributed systems, and building reliable software. I like work where performance, correctness, and clean
-              architecture all matter — and where improvements actually ship.
+              I'm a Computer Science graduate from Arizona State University (GPA 4.0) focused on robotics,
+              embodied AI, simulation-driven engineering, and distributed systems. My recent work centers on
+              perception-to-action pipelines, environmental awareness, robotic grasp planning, and large-scale
+              simulation workflows using NVIDIA Isaac Sim and modern AI models.
             </p>
-
             <div class="aboutStats">
               <div class="stat"><div class="statNum">4.0</div><div class="statLbl">GPA</div></div>
               <div class="stat"><div class="statNum">2+</div><div class="statLbl">Years research</div></div>
@@ -315,21 +312,21 @@ const links = {
           <div class="aboutSide">
             <div class="card mini tilt" data-tilt>
               <div class="miniTitle">What I build</div>
-              <div class="miniText">Simulation pipelines, validation tooling, measurable & maintainable systems.</div>
+              <div class="miniText">Robotics simulation pipelines, perception-to-action systems, and reliable evaluation tooling.</div>
             </div>
             <div class="card mini tilt" data-tilt>
               <div class="miniTitle">What I optimize</div>
-              <div class="miniText">Latency, reliability, modularity, and the “why is this flaky?” stuff.</div>
+              <div class="miniText">Grasp success, latency, failure modes, modularity, and simulation reliability.</div>
             </div>
             <div class="card mini tilt" data-tilt>
-              <div class="miniTitle">What I’m exploring</div>
-              <div class="miniText">Performance profiling, stronger C++ depth, and cleaner distributed workflows.</div>
+              <div class="miniTitle">What I'm exploring</div>
+              <div class="miniText">Embodied AI, stronger C++ depth, robotics perception, and sim-to-real workflows.</div>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT (UNCHANGED - KEEP CURRENT) -->
+      <!-- CONTACT -->
       <section class="section" id="contact">
         <div class="sectionHead center reveal" data-reveal>
           <h2 class="sectionTitle">Contact</h2>
@@ -344,7 +341,6 @@ const links = {
             </span>
             <span class="ctaArrow">→</span>
           </a>
-
           <div class="contactPills">
             <a class="pill" href={links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
               <span class="pillIcon">in</span><span class="pillLabel">LinkedIn</span>
@@ -362,19 +358,20 @@ const links = {
           <a class="footerLink" href="#top">Back to top ↑</a>
         </div>
       </footer>
+
     </main>
 
     <script>
-      // ===== helpers
       function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
 
-      // Engine start (kept from your CURRENT code)
+      // Boot sequence
       window.addEventListener("load", () => {
         document.body.classList.remove("boot");
         document.body.classList.add("ignite");
         setTimeout(() => document.body.classList.add("coast"), 900);
         setTimeout(() => document.body.classList.remove("ignite"), 1200);
         setTimeout(() => document.body.classList.add("settle"), 2400);
+        requestAnimationFrame(setupReveal);
       });
 
       // Speedlines parallax
@@ -386,7 +383,7 @@ const links = {
       window.addEventListener("scroll", onParallax, { passive: true });
       onParallax();
 
-      // ========= HERO (REVERTED): old staged scroll (Step2 + Step3) =========
+      // Hero staged scroll reveal
       const hero = document.getElementById("heroStage");
       const step2 = document.querySelector('[data-step="2"]');
       const step3 = document.querySelector('[data-step="3"]');
@@ -418,64 +415,40 @@ const links = {
       window.addEventListener("resize", onHeroScroll);
       onHeroScroll();
 
-      // Reveal
+      // Scroll reveal
       function setupReveal() {
-        const revealEls = document.querySelectorAll("[data-reveal]");
-        const revealIO = new IntersectionObserver(
+        const els = document.querySelectorAll("[data-reveal]");
+        const io = new IntersectionObserver(
           (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
           { threshold: 0.16 }
         );
-        revealEls.forEach((el) => revealIO.observe(el));
+        els.forEach((el) => io.observe(el));
       }
 
-      window.addEventListener("load", () => {
-        document.body.classList.remove("boot");
-        document.body.classList.add("ignite");
-        setTimeout(() => document.body.classList.add("coast"), 900);
-        setTimeout(() => document.body.classList.remove("ignite"), 1200);
-        setTimeout(() => document.body.classList.add("settle"), 2400);
-
-        requestAnimationFrame(setupReveal);
-      });
-
-
       // Hover tilt
-      const tiltEls = document.querySelectorAll("[data-tilt]");
-      tiltEls.forEach((el) => {
+      document.querySelectorAll("[data-tilt]").forEach((el) => {
         let raf = null;
-
-        const onMove = (e) => {
+        el.addEventListener("mousemove", (e) => {
           const r = el.getBoundingClientRect();
           const px = (e.clientX - r.left) / r.width;
           const py = (e.clientY - r.top) / r.height;
-
           const rx = (0.5 - py) * 18;
           const ry = (px - 0.5) * 22;
-          const tz = 12;
-
           if (raf) cancelAnimationFrame(raf);
           raf = requestAnimationFrame(() => {
-            el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(${tz}px)`;
+            el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(12px)`;
           });
-        };
-
-        const onLeave = () => { if (raf) cancelAnimationFrame(raf); el.style.transform = ""; };
-
-        el.addEventListener("mousemove", onMove);
-        el.addEventListener("mouseleave", onLeave);
+        });
+        el.addEventListener("mouseleave", () => {
+          if (raf) cancelAnimationFrame(raf);
+          el.style.transform = "";
+        });
       });
 
-      // Vertical timeline “dock magnify”
-      const vItems = Array.from(document.querySelectorAll("[data-vitem]"));
-      vItems.forEach((item) => {
-        item.addEventListener("mouseenter", () => {
-          item.classList.add("hot");
-          item.style.zIndex = "6";
-        });
-        item.addEventListener("mouseleave", () => {
-          item.classList.remove("hot");
-          item.style.zIndex = "";
-        });
+      // Timeline dock magnify
+      document.querySelectorAll("[data-vitem]").forEach((item) => {
+        item.addEventListener("mouseenter", () => { item.classList.add("hot"); item.style.zIndex = "6"; });
+        item.addEventListener("mouseleave", () => { item.classList.remove("hot"); item.style.zIndex = ""; });
       });
     </script>
 
@@ -484,17 +457,18 @@ const links = {
         --bg0: #050607;
         --bg1: #0b0f12;
 
-        /* Merc vibe */
-        --teal: #00d6c9;
-        --cyan: #00a7ff;
-        --neon: #d7ff00;
+        /* McLaren-influenced: papaya replaces neon, teal/cyan kept subtle */
+        --papaya:  #FF8000;
+        --papaya2: #ff9a35;
+        --teal:    #00c4b4;
+        --cyan:    #00a7ff;
 
-        --text: #eef4ff;
+        --text:  #eef4ff;
         --muted: rgba(238, 244, 255, 0.72);
 
         --shadow: 0 18px 60px rgba(0, 0, 0, 0.62);
 
-        --fontBody: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+        --fontBody:    "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
         --fontDisplay: "Sora", "Space Grotesk", ui-sans-serif, system-ui;
       }
 
@@ -505,73 +479,70 @@ const links = {
         color: var(--text);
         font-family: var(--fontBody);
         background:
-          radial-gradient(1000px 650px at 18% 14%, rgba(0, 214, 201, 0.16), transparent 60%),
-          radial-gradient(1000px 700px at 82% 24%, rgba(0, 167, 255, 0.12), transparent 60%),
+          radial-gradient(1000px 650px at 18% 14%, rgba(255, 128, 0, 0.09), transparent 60%),
+          radial-gradient(1000px 700px at 82% 24%, rgba(0, 167, 255, 0.09), transparent 60%),
           linear-gradient(180deg, var(--bg0), var(--bg1));
         overflow-x: hidden;
       }
-
       body.boot * { transition: none !important; }
 
-      /* One fixed composited plane (prevents seam tiles) */
-      #bgStage{
+      /* ── Background ── */
+      #bgStage {
         position: fixed;
-        inset: -2px;                 /* IMPORTANT: overdraw to hide 1px seams */
+        inset: -2px;
         pointer-events: none;
         z-index: 0;
         overflow: hidden;
-        isolation: isolate;          /* keeps blending contained */
-        transform: translateZ(0);    /* single stable layer */
+        isolation: isolate;
+        transform: translateZ(0);
         backface-visibility: hidden;
         will-change: transform;
-        contain: paint;              /* reduces compositor tearing */
+        contain: paint;
       }
-
-      /* layers live INSIDE the fixed stage */
-      #bgGlow, #speedlines, #noise{
+      #bgGlow, #speedlines, #noise {
         position: absolute;
         inset: 0;
         pointer-events: none;
         backface-visibility: hidden;
         transform: translateZ(0);
       }
-
-      /* ===== Your existing visuals (unchanged) ===== */
-      #bgGlow{
+      #bgGlow {
         background:
-          radial-gradient(1200px 700px at 50% 0%, rgba(0, 214, 201, 0.10), transparent 62%),
-          radial-gradient(900px 600px at 20% 70%, rgba(0, 167, 255, 0.08), transparent 70%),
-          radial-gradient(900px 700px at 85% 80%, rgba(215,255,0,0.05), transparent 68%);
+          radial-gradient(1200px 700px at 50% 0%,  rgba(255, 128, 0, 0.07),  transparent 62%),
+          radial-gradient(900px  600px at 20% 70%,  rgba(0, 167, 255, 0.07),  transparent 70%),
+          radial-gradient(900px  700px at 85% 80%,  rgba(255, 154, 53, 0.04), transparent 68%);
         opacity: 0.9;
         transition: opacity 600ms ease;
       }
-
-      /* keep speedlines, but make it less seam-prone */
-      #speedlines{
+      #speedlines {
         background:
           linear-gradient(115deg,
             transparent 0%,
-            rgba(0,214,201,0.12) 12%,
+            rgba(255, 128, 0, 0.08)  12%,
             transparent 22%,
-            rgba(255,255,255,0.05) 35%,
+            rgba(255, 255, 255, 0.04) 35%,
             transparent 45%,
-            rgba(0,167,255,0.10) 58%,
+            rgba(0, 167, 255, 0.07)  58%,
             transparent 70%,
-            rgba(0,214,201,0.10) 86%,
+            rgba(255, 128, 0, 0.07)  86%,
             transparent 100%);
-        opacity: 0.48;
+        opacity: 0.45;
         mix-blend-mode: screen;
         will-change: transform;
       }
-
-      /* noise */
-      #noise{
+      #noise {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
         opacity: 0.18;
         mix-blend-mode: overlay;
       }
 
+      /* ── Boot ignite states ── */
+      body.ignite #speedlines { opacity: 0.68; }
+      body.ignite .nameFrame::before { opacity: 0.88; filter: blur(16px); transform: scale(1.07); }
+      body.coast .nameFrame::before { opacity: 0.52; filter: blur(13px); transition: opacity 900ms ease, filter 900ms ease, transform 900ms ease; }
+      body.settle .nameFrame::before { opacity: 0.28; filter: blur(10px); transition: opacity 1200ms ease, filter 1200ms ease; }
 
+      /* ── Nav ── */
       .nav {
         position: sticky;
         top: 0;
@@ -594,15 +565,16 @@ const links = {
       }
       .navLinks { display: flex; gap: 14px; align-items: center; }
       .navLink {
-        color: rgba(238,244,255,0.78);
+        color: rgba(238, 244, 255, 0.78);
         text-decoration: none;
         font-weight: 750;
         padding: 8px 10px;
         border-radius: 10px;
         transition: transform 120ms ease, background 120ms ease, color 120ms ease;
       }
-      .navLink:hover { transform: translateY(-1px); background: rgba(255,255,255,0.06); color: rgba(238,244,255,0.95); }
+      .navLink:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.06); color: rgba(238, 244, 255, 0.95); }
 
+      /* ── Buttons ── */
       .btn {
         display: inline-flex;
         align-items: center;
@@ -610,52 +582,45 @@ const links = {
         gap: 8px;
         padding: 10px 14px;
         border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.06);
-        color: rgba(238,244,255,0.92);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(238, 244, 255, 0.92);
         text-decoration: none;
         font-weight: 900;
-        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease, color 120ms ease;
+        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
         will-change: transform;
       }
-      .btn:hover {
-        transform: translateY(-1px) scale(1.06);
-        border-color: rgba(0,214,201,0.35);
-        box-shadow: 0 14px 34px rgba(0,214,201,0.12);
-      }
+      .btn:hover { transform: translateY(-1px) scale(1.06); border-color: rgba(255, 128, 0, 0.40); box-shadow: 0 14px 34px rgba(255, 128, 0, 0.12); }
       .btn:active { transform: translateY(0) scale(0.985); }
 
-      .btnNeon {
-        background: var(--neon);
+      .btnAccent {
+        background: var(--papaya);
         color: #0b0f12;
-        border-color: rgba(215,255,0,0.85);
-        box-shadow: 0 14px 42px rgba(215,255,0,0.18);
+        border-color: rgba(255, 128, 0, 0.90);
+        box-shadow: 0 14px 42px rgba(255, 128, 0, 0.20);
+        font-weight: 800;
       }
-      .btnNeon:hover { box-shadow: 0 18px 54px rgba(215,255,0,0.24); filter: saturate(1.08); border-color: rgba(215,255,0,0.95); }
+      .btnAccent:hover { box-shadow: 0 18px 54px rgba(255, 128, 0, 0.30); filter: brightness(1.06); border-color: rgba(255, 128, 0, 1); }
 
       .iconBtn {
         width: 46px; height: 46px;
         display: grid; place-items: center;
         border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.06);
-        color: rgba(238,244,255,0.92);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(238, 244, 255, 0.92);
         text-decoration: none;
         font-weight: 950;
         transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
       }
-      .iconBtn:hover { transform: translateY(-1px) scale(1.08); border-color: rgba(0,214,201,0.45); box-shadow: 0 14px 34px rgba(0,214,201,0.12); }
+      .iconBtn:hover { transform: translateY(-1px) scale(1.08); border-color: rgba(255, 128, 0, 0.50); box-shadow: 0 14px 34px rgba(255, 128, 0, 0.14); }
       .iconBtn:active { transform: translateY(0) scale(0.985); }
 
       main { position: relative; z-index: 1; }
 
-      /* ===== HERO (REVERTED OLD) ===== */
-      .heroStage{
-        position: relative;
-        height: 185vh;
-        z-index: 1;
-      }
-      .heroSticky{
+      /* ── Hero ── */
+      .heroStage { position: relative; height: 185vh; z-index: 1; }
+      .heroSticky {
         position: sticky;
         top: 0;
         height: calc(100vh - 62px);
@@ -663,23 +628,23 @@ const links = {
         place-items: center;
         padding: 18px;
       }
-      .heroStep{
+      .heroStep {
         width: min(1040px, 94vw);
         display: grid;
         place-items: center;
         gap: 16px;
-		height: 100%;              /* ← makes the step fill the hero */
-  		align-content: center;
-		transform: translateY(8vh);
+        height: 100%;
+        align-content: center;
+        transform: translateY(8vh);
       }
-      .heroStep2, .heroStep3{
+      .heroStep2, .heroStep3 {
         opacity: 0;
         transform: translateY(22px) scale(0.98);
         filter: blur(6px);
         will-change: transform, opacity, filter;
       }
 
-      .heroName{
+      .heroName {
         margin: 0;
         font-family: var(--fontDisplay);
         font-weight: 950;
@@ -690,123 +655,114 @@ const links = {
         text-align: center;
       }
 
-      .nameFrame{
+      .nameFrame {
         position: relative;
         display: inline-block;
         padding: 14px;
         border-radius: 30px;
         isolation: isolate;
       }
-      .nameFrame::before{
-        content:"";
-        position:absolute;
-        inset:-8px;
+      .nameFrame::before {
+        content: "";
+        position: absolute;
+        inset: -8px;
         border-radius: 36px;
-        background:
-          conic-gradient(
-            from 210deg,
-            rgba(0,214,201,0.95),
-            rgba(0,167,255,0.95),
-            rgba(215,255,0,0.92),
-            rgba(0,214,201,0.95)
-          );
+        background: conic-gradient(
+          from 210deg,
+          rgba(255, 128, 0,  0.95),
+          rgba(0,   167, 255, 0.90),
+          rgba(255, 154, 53, 0.88),
+          rgba(255, 128, 0,  0.95)
+        );
         filter: blur(12px);
-        opacity: 0.40;
+        opacity: 0.38;
         z-index: -1;
         animation: ringPulse 4s ease-in-out infinite;
-		transition: opacity 1200ms ease, filter 1200ms ease;
+        transition: opacity 1200ms ease, filter 1200ms ease;
       }
-      .nameFrame::after{
-        content:"";
-        position:absolute;
-        inset:0;
+      .nameFrame::after {
+        content: "";
+        position: absolute;
+        inset: 0;
         border-radius: 30px;
-        background: rgba(0,0,0,0.25);
-        border: 1px solid rgba(255,255,255,0.14);
+        background: rgba(0, 0, 0, 0.25);
+        border: 1px solid rgba(255, 255, 255, 0.14);
         z-index: -1;
-        box-shadow: 0 26px 90px rgba(0,0,0,0.60);
+        box-shadow: 0 26px 90px rgba(0, 0, 0, 0.60);
       }
-      @keyframes ringPulse{
-        0%,100%{ transform: scale(1); opacity: 0.34; }
-        50%{ transform: scale(1.035); opacity: 0.58; }
+      @keyframes ringPulse {
+        0%,100%{ transform: scale(1);     opacity: 0.32; }
+        50%    { transform: scale(1.035); opacity: 0.54; }
       }
-      .nameGlow{
+      .nameGlow {
         display: inline-block;
         padding: 14px 26px;
         border-radius: 24px;
-        background: rgba(0,0,0,0.18);
-        text-shadow: 0 10px 45px rgba(0,214,201,0.18);
+        background: rgba(0, 0, 0, 0.18);
+        text-shadow: 0 10px 45px rgba(255, 128, 0, 0.16);
       }
 
-      body.ignite .nameFrame::before { opacity: 0.92; filter: blur(16px); transform: scale(1.07); }
-      body.ignite #speedlines { opacity: 0.72; }
-      body.coast .nameFrame::before { opacity: 0.55; filter: blur(13px); transition: opacity 900ms ease, filter 900ms ease, transform 900ms ease; }
-      body.settle .nameFrame::before {
-  opacity: 0.30;                 /* target idle brightness */
-  filter: blur(10px);            /* target idle softness */
-  transition:
-    opacity 1200ms ease,
-    filter 1200ms ease;
-}
-      .heroHint{
+      .heroHint {
         display: grid;
         place-items: center;
         gap: 2px;
-        color: rgba(238,244,255,0.74);
+        color: rgba(238, 244, 255, 0.74);
         font-weight: 900;
         letter-spacing: 0.8px;
         text-transform: uppercase;
         transition: opacity 220ms ease, transform 220ms ease;
         user-select: none;
       }
-      .hintArrow{ font-size: 20px; animation: bob 1.1s ease-in-out infinite; }
-      .hintText{ font-size: 12px; opacity: 0.9; }
+      .hintArrow { font-size: 20px; animation: bob 1.1s ease-in-out infinite; }
+      .hintText  { font-size: 12px; opacity: 0.9; }
       @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
 
-      .heroCard{
+      /* Hero card */
+      .heroCard {
         width: 100%;
         border-radius: 28px;
-        border: 1px solid rgba(255,255,255,0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         background:
-          radial-gradient(900px 420px at 50% 0%, rgba(0,214,201,0.16), transparent 70%),
-          linear-gradient(180deg, rgba(255,255,255,0.10), rgba(255,255,255,0.03));
+          radial-gradient(900px 420px at 50% 0%, rgba(255, 128, 0, 0.10), transparent 70%),
+          linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03));
         box-shadow: var(--shadow);
         padding: 26px 20px 22px;
         text-align: center;
         backdrop-filter: blur(16px);
       }
-      .heroKicker{
+      .heroKicker {
         font-family: var(--fontDisplay);
         font-weight: 950;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: rgba(238,244,255,0.92);
+        color: rgba(238, 244, 255, 0.92);
         font-size: clamp(14px, 1.9vw, 16px);
       }
-      .heroRoles{
+      .heroRoles {
         margin-top: 10px;
         font-weight: 900;
         letter-spacing: 0.9px;
         text-transform: uppercase;
-        color: rgba(238,244,255,0.72);
+        color: var(--papaya);
         font-size: clamp(12px, 1.6vw, 14px);
       }
-      .heroActions{ display: flex; justify-content: center; gap: 12px; margin-top: 18px; }
+      .heroActions { display: flex; justify-content: center; gap: 12px; margin-top: 18px; }
 
-      .quotePill{
+      /* Quote pill */
+      .quotePill {
         width: min(980px, 92vw);
         text-align: center;
         padding: 14px 18px;
         border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.12);
-        background: rgba(0,0,0,0.20);
-        color: rgba(238,244,255,0.92);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.20);
+        color: rgba(238, 244, 255, 0.92);
         font-weight: 900;
-        box-shadow: 0 16px 44px rgba(0,0,0,0.45);
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(12px);
       }
 
-      /* sections */
+      /* ── Sections ── */
       .section { padding: 72px 18px; max-width: 1080px; margin: 0 auto; position: relative; z-index: 10; }
       .sectionHead { margin-bottom: 18px; }
       .sectionHead.center { text-align: center; }
@@ -817,7 +773,6 @@ const links = {
         letter-spacing: 0.6px;
         font-size: 30px;
       }
-      .sectionSub { margin: 10px 0 0; color: var(--muted); font-weight: 700; line-height: 1.45; }
 
       .reveal {
         opacity: 0;
@@ -830,234 +785,175 @@ const links = {
 
       .tilt { transform-style: preserve-3d; transition: transform 120ms ease, box-shadow 120ms ease; }
 
-      /* ===== Projects (UNCHANGED - KEEP CURRENT) ===== */
-      .projectsSection{
-        position: relative;
-        z-index: 20;
-        isolation: isolate;
-        scroll-margin-top: 92px;
-      }
-      .projectsBay{
+      /* ── Projects ── */
+      .projectsSection { position: relative; z-index: 20; isolation: isolate; scroll-margin-top: 92px; }
+      .projectsBay {
         border-radius: 26px;
-        border: 1px solid rgba(255,255,255,0.10);
+        border: 1px solid rgba(255, 255, 255, 0.10);
         background:
-          radial-gradient(1100px 340px at 18% 0%, rgba(0,214,201,0.10), transparent 62%),
-          radial-gradient(1100px 340px at 82% 0%, rgba(0,167,255,0.08), transparent 62%),
-          rgba(0,0,0,0.20);
-        box-shadow: 0 32px 120px rgba(0,0,0,0.64);
+          radial-gradient(1100px 340px at 18% 0%, rgba(255, 128, 0, 0.08), transparent 62%),
+          radial-gradient(1100px 340px at 82% 0%, rgba(0, 167, 255, 0.07), transparent 62%),
+          rgba(0, 0, 0, 0.20);
+        box-shadow: 0 32px 120px rgba(0, 0, 0, 0.64);
         padding: 22px;
         overflow: hidden;
       }
-      .projectsHeader{
+      .projectsHeader {
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 16px;
         align-items: start;
         padding: 10px 10px 18px;
-        border-bottom: 1px solid rgba(255,255,255,0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
         margin-bottom: 18px;
       }
-      .projectsTitle{
+      .projectsTitle {
         margin: 0;
         font-family: var(--fontDisplay);
         font-weight: 950;
         letter-spacing: 0.6px;
         font-size: 38px;
       }
-      .projectsSub{
-        margin: 10px 0 0;
-        color: var(--muted);
-        font-weight: 750;
-        line-height: 1.45;
-        max-width: 62ch;
-      }
-      .projectsHeaderRight{
-        text-align: right;
-        display: grid;
-        gap: 8px;
-        align-content: start;
-      }
-      .projectsKicker{
+      .projectsSub { margin: 10px 0 0; color: var(--muted); font-weight: 750; line-height: 1.45; max-width: 62ch; }
+      .projectsHeaderRight { text-align: right; display: grid; gap: 8px; align-content: start; }
+      .projectsKicker {
         font-family: var(--fontDisplay);
         font-weight: 950;
         letter-spacing: 1px;
         text-transform: uppercase;
-        color: rgba(238,244,255,0.92);
+        color: rgba(238, 244, 255, 0.92);
         font-size: 14px;
       }
-      .projectsRoles{
+      .projectsRoles {
         font-weight: 900;
         letter-spacing: 0.9px;
         text-transform: uppercase;
-        color: rgba(238,244,255,0.70);
+        color: var(--papaya);
         font-size: 12px;
       }
-      .projectsIcons{
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-        margin-top: 2px;
-      }
+      .projectsIcons { display: flex; justify-content: flex-end; gap: 10px; margin-top: 2px; }
 
-      .projGrid{
-        margin-top: 0;
+      .projGrid {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 14px;
       }
-
-      /* .projGrid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 3rem 2.5rem;   /* row gap | column gap */
-        /* margin-top: 2.5rem;
-      } */ 
-      .projCard{
+      .projCard {
         border-radius: 22px;
-        border: 1px solid rgba(255,255,255,0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         background:
-          radial-gradient(900px 280px at 18% 0%, rgba(215,255,0,0.09), transparent 60%),
-          radial-gradient(900px 280px at 82% 0%, rgba(0,167,255,0.08), transparent 60%),
-          rgba(0,0,0,0.20);
+          radial-gradient(900px 280px at 18% 0%, rgba(255, 128, 0, 0.07), transparent 60%),
+          radial-gradient(900px 280px at 82% 0%, rgba(0, 167, 255, 0.06), transparent 60%),
+          rgba(0, 0, 0, 0.20);
         padding: 18px;
-        box-shadow: 0 16px 44px rgba(0,0,0,0.45);
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
         transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease;
       }
-      .projCard:hover{
+      .projCard:hover {
         transform: translateY(-2px) scale(1.02);
-        border-color: rgba(215,255,0,0.30);
-        box-shadow: 0 26px 80px rgba(0,0,0,0.65);
-        filter: saturate(1.08);
+        border-color: rgba(255, 128, 0, 0.32);
+        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.65);
+        filter: saturate(1.06);
       }
-      .projTop{ display:flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+      .projTop { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
       .projTop h3 { margin: 0; font-weight: 950; letter-spacing: 0.2px; }
-      .projTag{
+      .projTag {
         font-size: 12px;
         font-weight: 900;
         padding: 6px 10px;
         border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.12);
-        background: rgba(255,255,255,0.06);
-        color: rgba(238,244,255,0.78);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(238, 244, 255, 0.78);
         white-space: nowrap;
       }
-      .projCard p { margin: 12px 0 0; color: rgba(238,244,255,0.74); line-height: 1.45; font-weight: 700; }
-      .projMeta { display:flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
+      .projCard p { margin: 12px 0 0; color: rgba(238, 244, 255, 0.74); line-height: 1.45; font-weight: 700; }
+      .projMeta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
       .chip {
         font-size: 12px;
         font-weight: 900;
         padding: 6px 10px;
         border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.12);
-        background: rgba(0,0,0,0.18);
-        color: rgba(238,244,255,0.78);
+        border: 1px solid rgba(255, 128, 0, 0.20);
+        background: rgba(255, 128, 0, 0.06);
+        color: rgba(238, 244, 255, 0.80);
       }
-      .projBtns { display:flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
+      .projBtns { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
 
-      @media (max-width: 860px){
-        .navLinks { gap: 10px; }
-        .navLink { display:none; }
-        .projectsHeader{ grid-template-columns: 1fr; }
-        .projectsHeaderRight{ text-align: left; }
-        .projectsIcons{ justify-content: flex-start; }
-        .projGrid{ grid-template-columns: 1fr; }
-        .aboutGrid { grid-template-columns: 1fr; }
-        .vLine { left: 18px; }
-        .vItem { padding-left: 48px; }
-      }
-
-      /* ===== Experience timeline (UNCHANGED - KEEP CURRENT) ===== */
-      .vTimeline{
-        position: relative;
-        margin-top: 18px;
-        padding: 10px 0 0;
-        display: grid;
-        gap: 18px;
-      }
-      .vLine{
+      /* ── Experience ── */
+      .vTimeline { position: relative; margin-top: 18px; padding: 10px 0 0; display: grid; gap: 18px; }
+      .vLine {
         position: absolute;
-        left: 22px;
-        top: 0;
-        bottom: 0;
+        left: 22px; top: 0; bottom: 0;
         width: 2px;
-        background: linear-gradient(180deg, rgba(0,214,201,0.0), rgba(0,214,201,0.35), rgba(0,167,255,0.25), rgba(0,214,201,0.0));
+        background: linear-gradient(180deg, rgba(255,128,0,0.0), rgba(255,128,0,0.40), rgba(0,167,255,0.22), rgba(255,128,0,0.0));
         opacity: 0.9;
       }
-      .vItem{
+      .vItem {
         position: relative;
         padding-left: 54px;
         transition: transform 150ms ease, filter 150ms ease;
         will-change: transform;
       }
-      .vDot{
+      .vDot {
         position: absolute;
-        left: 18px;
-        top: 26px;
-        width: 12px;
-        height: 12px;
+        left: 18px; top: 26px;
+        width: 12px; height: 12px;
         border-radius: 999px;
-        background: rgba(215,255,0,0.90);
-        box-shadow: 0 0 0 8px rgba(215,255,0,0.08), 0 0 34px rgba(215,255,0,0.22);
+        background: var(--papaya);
+        box-shadow: 0 0 0 8px rgba(255,128,0,0.10), 0 0 28px rgba(255,128,0,0.28);
       }
-      .vCard{
+      .vCard {
         border-radius: 20px;
-        border: 1px solid rgba(255,255,255,0.12);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         background:
-          radial-gradient(900px 260px at 12% 0%, rgba(0,214,201,0.10), transparent 60%),
-          rgba(0,0,0,0.20);
-        padding: 16px 16px 14px 16px;
-        box-shadow: 0 16px 44px rgba(0,0,0,0.45);
+          radial-gradient(900px 260px at 12% 0%, rgba(255, 128, 0, 0.08), transparent 60%),
+          rgba(0, 0, 0, 0.20);
+        padding: 16px 16px 14px;
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(12px);
         transition: border-color 120ms ease, box-shadow 120ms ease, transform 150ms ease;
       }
-      .vTop{ display:flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-      .vRole{ font-weight: 950; }
-      .vTime{ color: rgba(238,244,255,0.66); font-weight: 900; font-size: 13px; white-space: nowrap; }
-      .vOrg{ color: rgba(238,244,255,0.78); margin-top: 6px; font-weight: 900; }
-      .vNote{ color: rgba(238,244,255,0.70); margin-top: 8px; line-height: 1.4; font-weight: 700; }
+      .vTop { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+      .vRole { font-weight: 950; }
+      .vTime { color: rgba(238, 244, 255, 0.66); font-weight: 900; font-size: 13px; white-space: nowrap; }
+      .vOrg  { color: var(--papaya); margin-top: 6px; font-weight: 900; }
+      .vNote { color: rgba(238, 244, 255, 0.70); margin-top: 8px; line-height: 1.4; font-weight: 700; }
 
-      .vItem:hover .vCard{
-        border-color: rgba(0,214,201,0.34);
-        box-shadow: 0 24px 70px rgba(0,0,0,0.65);
-      }
-      .vItem.hot{
-        transform: translateY(-8px) scale(1.06);
-        filter: saturate(1.12);
-      }
-      .vItem.hot .vCard{
-        border-color: rgba(215,255,0,0.34);
-        box-shadow: 0 28px 86px rgba(0,0,0,0.72);
-      }
+      .vItem:hover .vCard { border-color: rgba(255, 128, 0, 0.30); box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65); }
+      .vItem.hot { transform: translateY(-8px) scale(1.06); filter: saturate(1.10); }
+      .vItem.hot .vCard { border-color: rgba(255, 128, 0, 0.40); box-shadow: 0 28px 86px rgba(0, 0, 0, 0.72); }
 
-      /* About (UNCHANGED - KEEP CURRENT) */
+      /* ── About ── */
       .aboutGrid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; margin-top: 18px; }
       .card {
         border-radius: 18px;
-        border: 1px solid rgba(255,255,255,0.12);
-        background: rgba(0,0,0,0.20);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        background: rgba(0, 0, 0, 0.20);
         padding: 18px;
-        box-shadow: 0 16px 44px rgba(0,0,0,0.45);
+        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
         backdrop-filter: blur(12px);
       }
       .aboutMain { padding: 22px; }
-      .aboutText { margin: 0; color: rgba(238,244,255,0.80); font-weight: 750; line-height: 1.55; font-size: 16px; }
+      .aboutText { margin: 0; color: rgba(238, 244, 255, 0.80); font-weight: 750; line-height: 1.55; font-size: 16px; }
       .aboutStats { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-      .stat { border-radius: 16px; border: 1px solid rgba(255,255,255,0.10); background: rgba(255,255,255,0.04); padding: 14px; text-align: center; }
-      .statNum { font-family: var(--fontDisplay); font-weight: 950; font-size: 22px; }
-      .statLbl { margin-top: 6px; color: rgba(238,244,255,0.70); font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
+      .stat {
+        border-radius: 16px;
+        border: 1px solid rgba(255, 128, 0, 0.16);
+        background: rgba(255, 128, 0, 0.05);
+        padding: 14px;
+        text-align: center;
+      }
+      .statNum { font-family: var(--fontDisplay); font-weight: 950; font-size: 22px; color: var(--papaya); }
+      .statLbl { margin-top: 6px; color: rgba(238, 244, 255, 0.70); font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
       .aboutSide { display: grid; gap: 14px; }
       .mini { padding: 16px; }
       .miniTitle { font-weight: 950; letter-spacing: 0.2px; }
-      .miniText { margin-top: 8px; color: rgba(238,244,255,0.72); font-weight: 750; line-height: 1.45; }
+      .miniText  { margin-top: 8px; color: rgba(238, 244, 255, 0.72); font-weight: 750; line-height: 1.45; }
 
-      /* Contact (UNCHANGED - KEEP CURRENT) */
-      .contactCenter{
-        margin-top: 18px;
-        display: grid;
-        justify-items: center;
-        gap: 14px;
-      }
-      .ctaMain{
+      /* ── Contact ── */
+      .contactCenter { margin-top: 18px; display: grid; justify-items: center; gap: 14px; }
+      .ctaMain {
         width: min(760px, 92vw);
         display: grid;
         grid-template-columns: 56px 1fr 44px;
@@ -1065,90 +961,97 @@ const links = {
         gap: 12px;
         padding: 14px 16px;
         border-radius: 22px;
-        border: 1px solid rgba(255,255,255,0.14);
+        border: 1px solid rgba(255, 255, 255, 0.14);
         background:
-          radial-gradient(900px 250px at 20% 0%, rgba(0,214,201,0.18), transparent 60%),
-          radial-gradient(900px 250px at 80% 0%, rgba(0,167,255,0.14), transparent 60%),
-          rgba(0,0,0,0.20);
+          radial-gradient(900px 250px at 20% 0%, rgba(255, 128, 0, 0.14), transparent 60%),
+          radial-gradient(900px 250px at 80% 0%, rgba(0, 167, 255, 0.10), transparent 60%),
+          rgba(0, 0, 0, 0.20);
         text-decoration: none;
         color: var(--text);
-        box-shadow: 0 26px 90px rgba(0,0,0,0.55);
+        box-shadow: 0 26px 90px rgba(0, 0, 0, 0.55);
         backdrop-filter: blur(14px);
         transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease;
       }
-      .ctaMain:hover{
-        transform: translateY(-2px) scale(1.02);
-        border-color: rgba(215,255,0,0.45);
-        box-shadow: 0 34px 110px rgba(0,0,0,0.70);
-        filter: saturate(1.08);
-      }
-      .ctaIcon{
+      .ctaMain:hover { transform: translateY(-2px) scale(1.02); border-color: rgba(255, 128, 0, 0.45); box-shadow: 0 34px 110px rgba(0, 0, 0, 0.70); filter: saturate(1.06); }
+      .ctaIcon {
         width: 56px; height: 56px;
         display: grid; place-items: center;
         border-radius: 16px;
-        background: rgba(215,255,0,0.90);
+        background: var(--papaya);
         color: #0b0f12;
         font-weight: 950;
-        box-shadow: 0 18px 52px rgba(215,255,0,0.18);
+        box-shadow: 0 18px 52px rgba(255, 128, 0, 0.22);
       }
-      .ctaText{ display: grid; gap: 2px; }
-      .ctaTop{ font-family: var(--fontDisplay); font-weight: 950; letter-spacing: 0.4px; }
-      .ctaBottom{ color: rgba(238,244,255,0.72); font-weight: 800; }
-      .ctaArrow{
+      .ctaText   { display: grid; gap: 2px; }
+      .ctaTop    { font-family: var(--fontDisplay); font-weight: 950; letter-spacing: 0.4px; }
+      .ctaBottom { color: rgba(238, 244, 255, 0.72); font-weight: 800; }
+      .ctaArrow {
         justify-self: end;
         width: 44px; height: 44px;
         display: grid; place-items: center;
         border-radius: 14px;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.06);
-        color: rgba(238,244,255,0.92);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        color: rgba(238, 244, 255, 0.92);
         font-weight: 950;
       }
-      .contactPills{
-        display:flex;
-        gap: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .pill{
-        display:inline-flex;
-        align-items:center;
+      .contactPills { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+      .pill {
+        display: inline-flex;
+        align-items: center;
         gap: 10px;
         padding: 10px 14px;
         border-radius: 999px;
-        border: 1px solid rgba(255,255,255,0.14);
-        background: rgba(255,255,255,0.06);
-        text-decoration:none;
-        color: rgba(238,244,255,0.92);
+        border: 1px solid rgba(255, 255, 255, 0.14);
+        background: rgba(255, 255, 255, 0.06);
+        text-decoration: none;
+        color: rgba(238, 244, 255, 0.92);
         font-weight: 900;
         transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
       }
-      .pill:hover{
-        transform: translateY(-1px) scale(1.06);
-        border-color: rgba(0,214,201,0.34);
-        box-shadow: 0 18px 54px rgba(0,214,201,0.12);
-      }
-      .pillIcon{
+      .pill:hover { transform: translateY(-1px) scale(1.06); border-color: rgba(255, 128, 0, 0.38); box-shadow: 0 18px 54px rgba(255, 128, 0, 0.12); }
+      .pillIcon {
         width: 28px; height: 28px;
-        display:grid; place-items:center;
+        display: grid; place-items: center;
         border-radius: 999px;
-        background: rgba(0,0,0,0.22);
-        border: 1px solid rgba(255,255,255,0.12);
+        background: rgba(0, 0, 0, 0.22);
+        border: 1px solid rgba(255, 255, 255, 0.12);
         font-weight: 950;
       }
 
+      /* ── Footer ── */
       .footer {
         max-width: 1080px;
         margin: 0 auto;
         padding: 26px 18px 40px;
-        color: rgba(238,244,255,0.62);
+        color: rgba(238, 244, 255, 0.62);
         display: flex;
         justify-content: space-between;
         gap: 12px;
-        border-top: 1px solid rgba(255,255,255,0.08);
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
       }
-      .footerLink { color: rgba(238,244,255,0.72); text-decoration: none; font-weight: 900; }
-      .footerLink:hover { color: rgba(238,244,255,0.92); }
+      .footerLink { color: rgba(238, 244, 255, 0.72); text-decoration: none; font-weight: 900; }
+      .footerLink:hover { color: var(--papaya); }
+
+      /* ── Responsive ── */
+      @media (max-width: 860px) {
+        .navLinks { gap: 10px; }
+        .navLink  { display: none; }
+        .projectsHeader { grid-template-columns: 1fr; }
+        .projectsHeaderRight { text-align: left; }
+        .projectsIcons { justify-content: flex-start; }
+        .projGrid  { grid-template-columns: 1fr; }
+        .aboutGrid { grid-template-columns: 1fr; }
+        .vLine { left: 18px; }
+        .vItem { padding-left: 48px; }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .nameFrame::before { animation: none; }
+        .hintArrow { animation: none; }
+        .reveal { transition: opacity 200ms ease; }
+      }
     </style>
+
   </body>
 </html>
