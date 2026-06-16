@@ -1,8 +1,8 @@
 ---
 const links = {
   linkedin: "https://www.linkedin.com/in/rajveermogal",
-  github: "https://github.com/rajveermogal",
-  email: "mailto:rmogal@asu.edu",
+  github:   "https://github.com/rajveermogal",
+  email:    "mailto:rmogal@asu.edu",
 };
 ---
 
@@ -12,422 +12,361 @@ const links = {
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Rajveer Mogal</title>
-    <meta
-      name="description"
-      content="Rajveer Mogal — Computer Science Graduate @ ASU. Robotics, Simulation, Embodied AI."
-    />
-
+    <meta name="description" content="Rajveer Mogal — Computer Science Graduate @ ASU. Robotics · Simulation · Embodied AI." />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@700;800;900&display=swap" rel="stylesheet" />
   </head>
 
-  <body class="boot">
+  <body>
 
-    <div id="bgStage" aria-hidden="true">
-      <div id="bgGlow"></div>
-      <div id="speedlines"></div>
-      <div id="noise"></div>
-    </div>
-
+    <!-- NAV -->
     <header class="nav">
-      <a class="brand" href="#top">RAJVEER MOGAL</a>
-      <nav class="navLinks">
-        <a class="navLink" href="#projects">Projects</a>
-        <a class="navLink" href="#experience">Experience</a>
-        <a class="navLink" href="#about">About</a>
-        <a class="navLink" href="#contact">Contact</a>
-        <a class="btn btnAccent" href={links.email}>Email</a>
+      <a class="nav-logo" href="#top">RM</a>
+      <nav class="nav-links">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
       </nav>
+      <a class="nav-cta" href={links.email}>Get in touch</a>
     </header>
 
     <main id="top">
 
-      <!-- HERO: staged reveal (Name → Roles → Quote) -->
-      <section class="heroStage" id="heroStage" aria-label="Hero">
-        <div class="heroSticky">
+      <!-- ═══════════════════════════════════
+           HERO — sticky scroll staged reveal
+      ══════════════════════════════════════ -->
+      <section class="hero-stage" id="heroStage">
+        <div class="hero-sticky">
 
-          <!-- STEP 1 -->
-          <div class="heroStep heroStep1">
-            <h1 class="heroName">
-              <span class="nameFrame">
-                <span class="nameGlow">RAJVEER MOGAL</span>
-              </span>
+          <!-- Step 1: name -->
+          <div class="hero-step step-1">
+            <div class="hero-eyebrow">Computer Science Graduate · ASU · 4.0 GPA</div>
+            <h1 class="hero-name">
+              <span class="hero-name-line" data-line="1">RAJVEER</span>
+              <span class="hero-name-line" data-line="2">MOGAL</span>
             </h1>
-            <div class="heroHint" id="heroHint" aria-hidden="true">
-              <span class="hintArrow">↓</span>
-              <span class="hintText">Scroll</span>
+            <div class="hero-hint" id="heroHint">
+              <span>↓</span>
+              <span>scroll</span>
             </div>
           </div>
 
-          <!-- STEP 2 -->
-          <div class="heroStep heroStep2" data-step="2">
-            <div class="heroCard tilt" data-tilt>
-              <div class="heroKicker">COMPUTER SCIENCE GRADUATE @ ASU</div>
-              <div class="heroRoles">ROBOTICS · SIMULATION · EMBODIED AI</div>
-              <div class="heroActions">
-                <a class="iconBtn" href={links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
-                <a class="iconBtn" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub">⌁</a>
-                <a class="iconBtn" href={links.email} aria-label="Email">✉</a>
+          <!-- Step 2: role card -->
+          <div class="hero-step step-2" data-step="2">
+            <div class="hero-card" data-tilt>
+              <div class="hero-card-left">
+                <p class="hero-card-label">currently</p>
+                <p class="hero-card-title">COMPUTER SCIENCE<br/>GRADUATE @ ASU</p>
+                <p class="hero-card-roles">Robotics · Simulation · Embodied AI</p>
+              </div>
+              <div class="hero-card-links">
+                <a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+                <a href={links.github}   target="_blank" rel="noreferrer">GitHub ↗</a>
+                <a href={links.email}>Email ↗</a>
               </div>
             </div>
           </div>
 
-          <!-- STEP 3 -->
-          <div class="heroStep heroStep3" data-step="3">
-            <div class="quotePill tilt" data-tilt>
-              "I build software the way I like my coffee: carefully engineered for consistency."
-            </div>
+          <!-- Step 3: quote -->
+          <div class="hero-step step-3" data-step="3">
+            <blockquote class="hero-quote" data-tilt>
+              <span class="quote-mark">"</span>
+              I build software the way I like my coffee: carefully engineered for consistency.
+              <span class="quote-mark">"</span>
+            </blockquote>
           </div>
 
         </div>
       </section>
 
-      <!-- PROJECTS -->
-      <section class="section projectsSection" id="projects">
-        <div class="projectsBay reveal" data-reveal>
-          <div class="projectsHeader">
-            <div class="projectsHeaderLeft">
-              <h2 class="projectsTitle">Projects</h2>
-              <p class="projectsSub">A few things I've built.</p>
+      <!-- ═══════════════════════════════════
+           PROJECTS
+      ══════════════════════════════════════ -->
+      <section class="section" id="projects">
+        <div class="section-header reveal" data-reveal>
+          <span class="section-label">build log</span>
+          <h2 class="section-title">Projects</h2>
+        </div>
+
+        <div class="proj-list">
+
+          <article class="proj-item reveal" data-reveal>
+            <div class="proj-meta">
+              <span class="proj-index">01</span>
+              <span class="proj-tag">Personal AI · RAG · 2026</span>
             </div>
-            <div class="projectsHeaderRight">
-              <div class="projectsKicker">COMPUTER SCIENCE GRADUATE @ ASU</div>
-              <div class="projectsRoles">ROBOTICS · SIMULATION · EMBODIED AI</div>
-              <div class="projectsIcons">
-                <a class="iconBtn" href={links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">in</a>
-                <a class="iconBtn" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub">⌁</a>
-                <a class="iconBtn" href={links.email} aria-label="Email">✉</a>
+            <div class="proj-body">
+              <h3 class="proj-name">Veris</h3>
+              <p class="proj-desc">Built a document-aware AI assistant that lets users chat with their PDFs and get answers backed by exact citations (filename + page). Retrieves the most relevant passages, applies a confidence gate to avoid hallucinations, and shows receipts for every answer.</p>
+              <div class="proj-chips">
+                <span>Python</span><span>Streamlit</span><span>OpenAI</span><span>FAISS</span><span>RAG</span>
+              </div>
+              <a class="proj-link" href="https://veris21.streamlit.app/" target="_blank">View project ↗</a>
+            </div>
+          </article>
+
+          <article class="proj-item reveal" data-reveal>
+            <div class="proj-meta">
+              <span class="proj-index">02</span>
+              <span class="proj-tag">FreeFuse · Internship</span>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-name">Robotic Grasp Simulation</h3>
+              <p class="proj-desc">Built an embodied AI robotic manipulation system that transformed visual observations into executable grasp actions in simulation. Developed perception-to-action pipelines using Gemma vision models, environmental awareness, grasp planning, and large-scale evaluation workflows in NVIDIA Isaac Sim.</p>
+              <div class="proj-chips">
+                <span>Python</span><span>Isaac Sim</span><span>Gemma</span><span>Computer Vision</span><span>Robotics</span><span>Distributed Systems</span>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="projGrid">
+          <article class="proj-item reveal" data-reveal>
+            <div class="proj-meta">
+              <span class="proj-index">03</span>
+              <span class="proj-tag">Java / JavaFX</span>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-name">Patient Management System</h3>
+              <p class="proj-desc">Modular desktop system for patient registration, tracking, and diagnostic visualization.</p>
+              <div class="proj-chips">
+                <span>Java</span><span>JavaFX</span><span>Modular Design</span>
+              </div>
+            </div>
+          </article>
 
-            <article class="projCard tilt" data-tilt>
-              <div class="projTop">
-                <h3>Veris</h3>
-                <span class="projTag">Personal AI · RAG · 2026</span>
+          <article class="proj-item reveal" data-reveal>
+            <div class="proj-meta">
+              <span class="proj-index">04</span>
+              <span class="proj-tag">ASU · Research</span>
+            </div>
+            <div class="proj-body">
+              <h3 class="proj-name">Research Analytics</h3>
+              <p class="proj-desc">Data cleaning and visualization scripts for large datasets; supported workshops and research workflows.</p>
+              <div class="proj-chips">
+                <span>Pandas</span><span>Visualization</span><span>Research</span>
               </div>
-              <p>
-                Built a document-aware AI assistant that lets users chat with their PDFs and get answers
-                backed by exact citations (filename + page). Veris retrieves the most relevant passages,
-                applies a confidence gate to avoid hallucinations, and shows "receipts" for every answer.
-              </p>
-              <div class="projMeta">
-                <span class="chip">Python</span>
-                <span class="chip">Streamlit</span>
-                <span class="chip">OpenAI</span>
-                <span class="chip">FAISS</span>
-                <span class="chip">RAG</span>
-              </div>
-              <div class="projBtns">
-                <a class="btn" href="https://veris21.streamlit.app/" target="_blank">View</a>
-              </div>
-            </article>
+            </div>
+          </article>
 
-            <article class="projCard tilt" data-tilt>
-              <div class="projTop">
-                <h3>Robotic Grasp Simulation</h3>
-                <span class="projTag">FreeFuse · Internship</span>
-              </div>
-              <p>
-                Built an embodied AI robotic manipulation system that transformed visual observations
-                into executable grasp actions in simulation. Developed perception-to-action pipelines
-                using Gemma vision models, environmental awareness, grasp planning, and large-scale
-                evaluation workflows in NVIDIA Isaac Sim.
-              </p>
-              <div class="projMeta">
-                <span class="chip">Python</span>
-                <span class="chip">Isaac Sim</span>
-                <span class="chip">Gemma</span>
-                <span class="chip">Computer Vision</span>
-                <span class="chip">Robotics</span>
-                <span class="chip">Distributed Systems</span>
-              </div>
-            </article>
-
-            <article class="projCard tilt" data-tilt>
-              <div class="projTop">
-                <h3>Patient Management System</h3>
-                <span class="projTag">Java / JavaFX</span>
-              </div>
-              <p>Modular desktop system for patient registration, tracking, and diagnostic visualization.</p>
-              <div class="projMeta">
-                <span class="chip">Java</span>
-                <span class="chip">JavaFX</span>
-                <span class="chip">Modular Design</span>
-              </div>
-            </article>
-
-            <article class="projCard tilt" data-tilt>
-              <div class="projTop">
-                <h3>Research Analytics</h3>
-                <span class="projTag">ASU · Research</span>
-              </div>
-              <p>Data cleaning + visualization scripts for large datasets; supported workshops and research workflows.</p>
-              <div class="projMeta">
-                <span class="chip">Pandas</span>
-                <span class="chip">Visualization</span>
-                <span class="chip">Research</span>
-              </div>
-            </article>
-
-          </div>
         </div>
       </section>
 
-      <!-- EXPERIENCE -->
+      <!-- ═══════════════════════════════════
+           EXPERIENCE
+      ══════════════════════════════════════ -->
       <section class="section" id="experience">
-        <div class="sectionHead reveal" data-reveal>
-          <h2 class="sectionTitle">Experience</h2>
+        <div class="section-header reveal" data-reveal>
+          <span class="section-label">timeline</span>
+          <h2 class="section-title">Experience</h2>
         </div>
 
-        <div class="vTimeline reveal" data-reveal>
-          <div class="vLine" aria-hidden="true"></div>
+        <div class="exp-list">
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Teaching Assistant — FSE394: Innovation in Corporate Technology</div>
-                <div class="vTime">Jan 2026 – Present</div>
-              </div>
-              <div class="vOrg">ASU Fulton Schools</div>
-              <div class="vNote">Consulting for course delivery + Canvas workflows (student perspective + instructor ops).</div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Jan 2026 – Present</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Teaching Assistant — FSE394: Innovation in Corporate Technology</div>
+              <div class="exp-org">ASU Fulton Schools</div>
+              <div class="exp-note">Consulting for course delivery + Canvas workflows (student perspective + instructor ops).</div>
             </div>
           </article>
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Grader — FSE301: Entrepreneurship & Value Creation</div>
-                <div class="vTime">Aug 2025 – Present</div>
-              </div>
-              <div class="vOrg">ASU Fulton Schools</div>
-              <div class="vNote">Rubrics, structured feedback, and consistent evaluation at scale.</div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Aug 2025 – Present</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Grader — FSE301: Entrepreneurship & Value Creation</div>
+              <div class="exp-org">ASU Fulton Schools</div>
+              <div class="exp-note">Rubrics, structured feedback, and consistent evaluation at scale.</div>
             </div>
           </article>
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Course Contributor — FSE394: Innovation in Corporate Technology</div>
-                <div class="vTime">Oct 2025 – Dec 2025</div>
-              </div>
-              <div class="vOrg">ASU Fulton Schools</div>
-              <div class="vNote">Course documentation + improvement recommendations for future terms.</div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Oct 2025 – Dec 2025</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Course Contributor — FSE394: Innovation in Corporate Technology</div>
+              <div class="exp-org">ASU Fulton Schools</div>
+              <div class="exp-note">Course documentation + improvement recommendations for future terms.</div>
             </div>
           </article>
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Robotic Grasp Simulation Intern</div>
-                <div class="vTime">Aug 2025 – Present</div>
-              </div>
-              <div class="vOrg">FreeFuse</div>
-              <div class="vNote">
-                Built perception-to-action simulation pipelines for robotic grasp planning, environmental awareness,
-                and large-scale evaluation in NVIDIA Isaac Sim.
-              </div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Aug 2025 – Present</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Robotic Grasp Simulation Intern</div>
+              <div class="exp-org">FreeFuse</div>
+              <div class="exp-note">Built perception-to-action simulation pipelines for robotic grasp planning, environmental awareness, and large-scale evaluation in NVIDIA Isaac Sim.</div>
             </div>
           </article>
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Undergraduate Research Assistant</div>
-                <div class="vTime">Jan 2024 – Present</div>
-              </div>
-              <div class="vOrg">Arizona State University</div>
-              <div class="vNote">Research analytics, visualization scripts, and workshop support.</div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Jan 2024 – Present</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Undergraduate Research Assistant</div>
+              <div class="exp-org">Arizona State University</div>
+              <div class="exp-note">Research analytics, visualization scripts, and workshop support.</div>
             </div>
           </article>
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Grader — CSE355: Theory of Computational Science</div>
-                <div class="vTime">Jan 2025 – May 2025</div>
-              </div>
-              <div class="vOrg">ASU Fulton Schools</div>
-              <div class="vNote">Graded automata / complexity assignments with consistency and clarity.</div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Jan 2025 – May 2025</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Grader — CSE355: Theory of Computational Science</div>
+              <div class="exp-org">ASU Fulton Schools</div>
+              <div class="exp-note">Graded automata / complexity assignments with consistency and clarity.</div>
             </div>
           </article>
 
-          <article class="vItem tilt" data-tilt data-vitem>
-            <div class="vDot" aria-hidden="true"></div>
-            <div class="vCard">
-              <div class="vTop">
-                <div class="vRole">Undergraduate Teaching Assistant</div>
-                <div class="vTime">Jan 2024 – May 2024</div>
-              </div>
-              <div class="vOrg">ASU Fulton Schools</div>
-              <div class="vNote">Mentored 150+ students in programming fundamentals and data structures.</div>
+          <article class="exp-item reveal" data-reveal>
+            <div class="exp-left">
+              <span class="exp-time">Jan 2024 – May 2024</span>
+            </div>
+            <div class="exp-right">
+              <div class="exp-role">Undergraduate Teaching Assistant</div>
+              <div class="exp-org">ASU Fulton Schools</div>
+              <div class="exp-note">Mentored 150+ students in programming fundamentals and data structures.</div>
             </div>
           </article>
 
         </div>
       </section>
 
-      <!-- ABOUT -->
+      <!-- ═══════════════════════════════════
+           ABOUT
+      ══════════════════════════════════════ -->
       <section class="section" id="about">
-        <div class="sectionHead reveal" data-reveal>
-          <h2 class="sectionTitle">About</h2>
+        <div class="section-header reveal" data-reveal>
+          <span class="section-label">background</span>
+          <h2 class="section-title">About</h2>
         </div>
 
-        <div class="aboutGrid reveal" data-reveal>
-          <div class="aboutMain card tilt" data-tilt>
-            <p class="aboutText">
+        <div class="about-grid reveal" data-reveal>
+          <div class="about-text">
+            <p>
               I'm a Computer Science graduate from Arizona State University (GPA 4.0) focused on robotics,
               embodied AI, simulation-driven engineering, and distributed systems. My recent work centers on
               perception-to-action pipelines, environmental awareness, robotic grasp planning, and large-scale
               simulation workflows using NVIDIA Isaac Sim and modern AI models.
             </p>
-            <div class="aboutStats">
-              <div class="stat"><div class="statNum">4.0</div><div class="statLbl">GPA</div></div>
-              <div class="stat"><div class="statNum">2+</div><div class="statLbl">Years research</div></div>
-              <div class="stat"><div class="statNum">150+</div><div class="statLbl">Students mentored</div></div>
+            <div class="about-stats">
+              <div class="stat">
+                <span class="stat-num">4.0</span>
+                <span class="stat-label">GPA</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">2+</span>
+                <span class="stat-label">Years research</span>
+              </div>
+              <div class="stat">
+                <span class="stat-num">150+</span>
+                <span class="stat-label">Students mentored</span>
+              </div>
             </div>
           </div>
 
-          <div class="aboutSide">
-            <div class="card mini tilt" data-tilt>
-              <div class="miniTitle">What I build</div>
-              <div class="miniText">Robotics simulation pipelines, perception-to-action systems, and reliable evaluation tooling.</div>
+          <div class="about-pillars">
+            <div class="pillar">
+              <span class="pillar-label">What I build</span>
+              <span class="pillar-text">Robotics simulation pipelines, perception-to-action systems, and reliable evaluation tooling.</span>
             </div>
-            <div class="card mini tilt" data-tilt>
-              <div class="miniTitle">What I optimize</div>
-              <div class="miniText">Grasp success, latency, failure modes, modularity, and simulation reliability.</div>
+            <div class="pillar">
+              <span class="pillar-label">What I optimize</span>
+              <span class="pillar-text">Grasp success, latency, failure modes, modularity, and simulation reliability.</span>
             </div>
-            <div class="card mini tilt" data-tilt>
-              <div class="miniTitle">What I'm exploring</div>
-              <div class="miniText">Embodied AI, stronger C++ depth, robotics perception, and sim-to-real workflows.</div>
+            <div class="pillar">
+              <span class="pillar-label">What I'm exploring</span>
+              <span class="pillar-text">Embodied AI, stronger C++ depth, robotics perception, and sim-to-real workflows.</span>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <div class="sectionHead center reveal" data-reveal>
-          <h2 class="sectionTitle">Contact</h2>
-        </div>
-
-        <div class="contactCenter reveal" data-reveal>
-          <a class="ctaMain tilt" data-tilt href={links.email}>
-            <span class="ctaIcon">✉</span>
-            <span class="ctaText">
-              <span class="ctaTop">Contact me</span>
-              <span class="ctaBottom">rmogal@asu.edu</span>
-            </span>
-            <span class="ctaArrow">→</span>
-          </a>
-          <div class="contactPills">
-            <a class="pill" href={links.linkedin} target="_blank" rel="noreferrer" aria-label="LinkedIn">
-              <span class="pillIcon">in</span><span class="pillLabel">LinkedIn</span>
-            </a>
-            <a class="pill" href={links.github} target="_blank" rel="noreferrer" aria-label="GitHub">
-              <span class="pillIcon">⌁</span><span class="pillLabel">GitHub</span>
-            </a>
+      <!-- ═══════════════════════════════════
+           CONTACT
+      ══════════════════════════════════════ -->
+      <section class="section section--contact" id="contact">
+        <div class="contact-inner reveal" data-reveal>
+          <span class="section-label">let's talk</span>
+          <h2 class="contact-heading">Get in touch.</h2>
+          <a class="contact-email" href={links.email}>rmogal@asu.edu ↗</a>
+          <div class="contact-links">
+            <a href={links.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a href={links.github}   target="_blank" rel="noreferrer">GitHub ↗</a>
           </div>
         </div>
       </section>
 
       <footer class="footer">
-        <div>© {new Date().getFullYear()} Rajveer Mogal</div>
-        <div class="footerRight">
-          <a class="footerLink" href="#top">Back to top ↑</a>
-        </div>
+        <span>© {new Date().getFullYear()} Rajveer Mogal</span>
+        <a href="#top" class="footer-top">Back to top ↑</a>
       </footer>
 
     </main>
 
     <script>
+      /* ── helpers ───────────────────────── */
       function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
 
-      // Boot sequence
-      window.addEventListener("load", () => {
-        document.body.classList.remove("boot");
-        document.body.classList.add("ignite");
-        setTimeout(() => document.body.classList.add("coast"), 900);
-        setTimeout(() => document.body.classList.remove("ignite"), 1200);
-        setTimeout(() => document.body.classList.add("settle"), 2400);
-        requestAnimationFrame(setupReveal);
-      });
-
-      // Speedlines parallax
-      const speedlines = document.getElementById("speedlines");
-      function onParallax() {
-        const y = window.scrollY || 0;
-        if (speedlines) speedlines.style.transform = `translate3d(0, ${y * 0.06}px, 0)`;
-      }
-      window.addEventListener("scroll", onParallax, { passive: true });
-      onParallax();
-
-      // Hero staged scroll reveal
-      const hero = document.getElementById("heroStage");
-      const step2 = document.querySelector('[data-step="2"]');
-      const step3 = document.querySelector('[data-step="3"]');
-      const heroHint = document.getElementById("heroHint");
+      /* ── hero scroll reveal ────────────── */
+      const heroStage = document.getElementById("heroStage");
+      const step2     = document.querySelector('[data-step="2"]');
+      const step3     = document.querySelector('[data-step="3"]');
+      const heroHint  = document.getElementById("heroHint");
 
       function onHeroScroll() {
-        if (!hero || !step2 || !step3) return;
-        const r = hero.getBoundingClientRect();
-        const total = hero.offsetHeight - window.innerHeight;
-        const scrolled = clamp(-r.top, 0, total);
-        const p = total > 0 ? scrolled / total : 0;
+        if (!heroStage || !step2 || !step3) return;
+        const r      = heroStage.getBoundingClientRect();
+        const total  = heroStage.offsetHeight - window.innerHeight;
+        const p      = total > 0 ? clamp(-r.top, 0, total) / total : 0;
 
         const s2 = clamp((p - 0.20) / 0.22, 0, 1);
-        step2.style.opacity = s2;
-        step2.style.transform = `translateY(${(1 - s2) * 22}px) scale(${0.98 + s2 * 0.02})`;
-        step2.style.filter = `blur(${(1 - s2) * 6}px)`;
+        step2.style.opacity   = s2;
+        step2.style.transform = `translateY(${(1 - s2) * 28}px)`;
+        step2.style.filter    = `blur(${(1 - s2) * 5}px)`;
 
-        const s3 = clamp((p - 0.52) / 0.22, 0, 1);
-        step3.style.opacity = s3;
-        step3.style.transform = `translateY(${(1 - s3) * 22}px) scale(${0.98 + s3 * 0.02})`;
-        step3.style.filter = `blur(${(1 - s3) * 6}px)`;
+        const s3 = clamp((p - 0.54) / 0.22, 0, 1);
+        step3.style.opacity   = s3;
+        step3.style.transform = `translateY(${(1 - s3) * 28}px)`;
+        step3.style.filter    = `blur(${(1 - s3) * 5}px)`;
 
         if (heroHint) {
-          heroHint.style.opacity = `${clamp(1 - s2 * 1.35, 0, 1)}`;
-          heroHint.style.transform = `translateY(${s2 * 10}px)`;
+          heroHint.style.opacity   = `${clamp(1 - s2 * 2, 0, 1)}`;
+          heroHint.style.transform = `translateY(${s2 * 12}px)`;
         }
       }
       window.addEventListener("scroll", onHeroScroll, { passive: true });
       window.addEventListener("resize", onHeroScroll);
       onHeroScroll();
 
-      // Scroll reveal
-      function setupReveal() {
-        const els = document.querySelectorAll("[data-reveal]");
-        const io = new IntersectionObserver(
-          (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add("in")),
-          { threshold: 0.16 }
-        );
-        els.forEach((el) => io.observe(el));
-      }
+      /* ── scroll reveal ─────────────────── */
+      const revealIO = new IntersectionObserver(
+        (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); }),
+        { threshold: 0.12 }
+      );
+      document.querySelectorAll("[data-reveal]").forEach(el => revealIO.observe(el));
 
-      // Hover tilt
-      document.querySelectorAll("[data-tilt]").forEach((el) => {
+      /* ── tilt ──────────────────────────── */
+      document.querySelectorAll("[data-tilt]").forEach(el => {
         let raf = null;
-        el.addEventListener("mousemove", (e) => {
-          const r = el.getBoundingClientRect();
+        el.addEventListener("mousemove", e => {
+          const r  = el.getBoundingClientRect();
           const px = (e.clientX - r.left) / r.width;
-          const py = (e.clientY - r.top) / r.height;
-          const rx = (0.5 - py) * 18;
-          const ry = (px - 0.5) * 22;
+          const py = (e.clientY - r.top)  / r.height;
           if (raf) cancelAnimationFrame(raf);
           raf = requestAnimationFrame(() => {
-            el.style.transform = `perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg) translateZ(12px)`;
+            el.style.transform = `perspective(1000px) rotateX(${(0.5 - py) * 10}deg) rotateY(${(px - 0.5) * 14}deg) translateZ(8px)`;
           });
         });
         el.addEventListener("mouseleave", () => {
@@ -436,610 +375,577 @@ const links = {
         });
       });
 
-      // Timeline dock magnify
-      document.querySelectorAll("[data-vitem]").forEach((item) => {
-        item.addEventListener("mouseenter", () => { item.classList.add("hot"); item.style.zIndex = "6"; });
-        item.addEventListener("mouseleave", () => { item.classList.remove("hot"); item.style.zIndex = ""; });
+      /* ── hero name stagger ─────────────── */
+      window.addEventListener("load", () => {
+        document.querySelectorAll("[data-line]").forEach((el, i) => {
+          el.style.animationDelay = `${i * 0.12}s`;
+          el.classList.add("name-in");
+        });
       });
     </script>
 
     <style>
+      /* ══════════════════════════════════════
+         TOKENS
+      ══════════════════════════════════════ */
       :root {
-        --bg0: #050607;
-        --bg1: #0b0f12;
+        --black:   #080808;
+        --off:     #111111;
+        --border:  rgba(255,255,255,0.10);
+        --muted:   rgba(255,255,255,0.45);
+        --text:    #f0f0f0;
+        --accent:  #FF8000;   /* papaya */
 
-        /* McLaren-influenced: papaya replaces neon, teal/cyan kept subtle */
-        --papaya:  #FF8000;
-        --papaya2: #ff9a35;
-        --teal:    #00c4b4;
-        --cyan:    #00a7ff;
-
-        --text:  #eef4ff;
-        --muted: rgba(238, 244, 255, 0.72);
-
-        --shadow: 0 18px 60px rgba(0, 0, 0, 0.62);
-
-        --fontBody:    "Space Grotesk", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
-        --fontDisplay: "Sora", "Space Grotesk", ui-sans-serif, system-ui;
+        --font-display: "Sora",  ui-sans-serif, system-ui;
+        --font-body:    "Inter", ui-sans-serif, system-ui;
       }
 
-      * { box-sizing: border-box; }
+      /* ══════════════════════════════════════
+         BASE
+      ══════════════════════════════════════ */
+      *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
       html { scroll-behavior: smooth; }
       body {
-        margin: 0;
+        background: var(--black);
         color: var(--text);
-        font-family: var(--fontBody);
-        background:
-          radial-gradient(1000px 650px at 18% 14%, rgba(255, 128, 0, 0.09), transparent 60%),
-          radial-gradient(1000px 700px at 82% 24%, rgba(0, 167, 255, 0.09), transparent 60%),
-          linear-gradient(180deg, var(--bg0), var(--bg1));
+        font-family: var(--font-body);
+        font-size: 16px;
+        line-height: 1.6;
         overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
       }
-      body.boot * { transition: none !important; }
+      a { color: inherit; text-decoration: none; }
 
-      /* ── Background ── */
-      #bgStage {
-        position: fixed;
-        inset: -2px;
-        pointer-events: none;
-        z-index: 0;
-        overflow: hidden;
-        isolation: isolate;
-        transform: translateZ(0);
-        backface-visibility: hidden;
-        will-change: transform;
-        contain: paint;
-      }
-      #bgGlow, #speedlines, #noise {
-        position: absolute;
-        inset: 0;
-        pointer-events: none;
-        backface-visibility: hidden;
-        transform: translateZ(0);
-      }
-      #bgGlow {
-        background:
-          radial-gradient(1200px 700px at 50% 0%,  rgba(255, 128, 0, 0.07),  transparent 62%),
-          radial-gradient(900px  600px at 20% 70%,  rgba(0, 167, 255, 0.07),  transparent 70%),
-          radial-gradient(900px  700px at 85% 80%,  rgba(255, 154, 53, 0.04), transparent 68%);
-        opacity: 0.9;
-        transition: opacity 600ms ease;
-      }
-      #speedlines {
-        background:
-          linear-gradient(115deg,
-            transparent 0%,
-            rgba(255, 128, 0, 0.08)  12%,
-            transparent 22%,
-            rgba(255, 255, 255, 0.04) 35%,
-            transparent 45%,
-            rgba(0, 167, 255, 0.07)  58%,
-            transparent 70%,
-            rgba(255, 128, 0, 0.07)  86%,
-            transparent 100%);
-        opacity: 0.45;
-        mix-blend-mode: screen;
-        will-change: transform;
-      }
-      #noise {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='.12'/%3E%3C/svg%3E");
-        opacity: 0.18;
-        mix-blend-mode: overlay;
-      }
-
-      /* ── Boot ignite states ── */
-      body.ignite #speedlines { opacity: 0.68; }
-      body.ignite .nameFrame::before { opacity: 0.88; filter: blur(16px); transform: scale(1.07); }
-      body.coast .nameFrame::before { opacity: 0.52; filter: blur(13px); transition: opacity 900ms ease, filter 900ms ease, transform 900ms ease; }
-      body.settle .nameFrame::before { opacity: 0.28; filter: blur(10px); transition: opacity 1200ms ease, filter 1200ms ease; }
-
-      /* ── Nav ── */
+      /* ══════════════════════════════════════
+         NAV
+      ══════════════════════════════════════ */
       .nav {
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        height: 64px;
+        border-bottom: 1px solid var(--border);
+        background: rgba(8,8,8,0.85);
+        backdrop-filter: blur(12px);
+      }
+      .nav-logo {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 18px;
+        letter-spacing: 2px;
+        color: var(--accent);
+      }
+      .nav-links {
+        display: flex;
+        gap: 32px;
+      }
+      .nav-links a {
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: var(--muted);
+        transition: color 150ms;
+      }
+      .nav-links a:hover { color: var(--text); }
+      .nav-cta {
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding: 8px 20px;
+        border: 1px solid var(--border);
+        border-radius: 4px;
+        color: var(--text);
+        transition: border-color 150ms, color 150ms;
+      }
+      .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
+
+      /* ══════════════════════════════════════
+         HERO
+      ══════════════════════════════════════ */
+      .hero-stage {
+        position: relative;
+        height: 200vh;
+      }
+      .hero-sticky {
         position: sticky;
         top: 0;
-        z-index: 50;
+        height: 100vh;
         display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 14px 20px;
-        background: rgba(0, 0, 0, 0.28);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        backdrop-filter: blur(14px);
-      }
-      .brand {
-        color: var(--text);
-        text-decoration: none;
-        font-weight: 900;
-        letter-spacing: 1.1px;
-        font-family: var(--fontDisplay);
-        text-transform: uppercase;
-      }
-      .navLinks { display: flex; gap: 14px; align-items: center; }
-      .navLink {
-        color: rgba(238, 244, 255, 0.78);
-        text-decoration: none;
-        font-weight: 750;
-        padding: 8px 10px;
-        border-radius: 10px;
-        transition: transform 120ms ease, background 120ms ease, color 120ms ease;
-      }
-      .navLink:hover { transform: translateY(-1px); background: rgba(255, 255, 255, 0.06); color: rgba(238, 244, 255, 0.95); }
-
-      /* ── Buttons ── */
-      .btn {
-        display: inline-flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(238, 244, 255, 0.92);
-        text-decoration: none;
-        font-weight: 900;
-        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease, background 120ms ease;
-        will-change: transform;
-      }
-      .btn:hover { transform: translateY(-1px) scale(1.06); border-color: rgba(255, 128, 0, 0.40); box-shadow: 0 14px 34px rgba(255, 128, 0, 0.12); }
-      .btn:active { transform: translateY(0) scale(0.985); }
-
-      .btnAccent {
-        background: var(--papaya);
-        color: #0b0f12;
-        border-color: rgba(255, 128, 0, 0.90);
-        box-shadow: 0 14px 42px rgba(255, 128, 0, 0.20);
-        font-weight: 800;
-      }
-      .btnAccent:hover { box-shadow: 0 18px 54px rgba(255, 128, 0, 0.30); filter: brightness(1.06); border-color: rgba(255, 128, 0, 1); }
-
-      .iconBtn {
-        width: 46px; height: 46px;
-        display: grid; place-items: center;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(238, 244, 255, 0.92);
-        text-decoration: none;
-        font-weight: 950;
-        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
-      }
-      .iconBtn:hover { transform: translateY(-1px) scale(1.08); border-color: rgba(255, 128, 0, 0.50); box-shadow: 0 14px 34px rgba(255, 128, 0, 0.14); }
-      .iconBtn:active { transform: translateY(0) scale(0.985); }
-
-      main { position: relative; z-index: 1; }
-
-      /* ── Hero ── */
-      .heroStage { position: relative; height: 185vh; z-index: 1; }
-      .heroSticky {
-        position: sticky;
-        top: 0;
-        height: calc(100vh - 62px);
-        display: grid;
-        place-items: center;
-        padding: 18px;
-      }
-      .heroStep {
-        width: min(1040px, 94vw);
-        display: grid;
-        place-items: center;
-        gap: 16px;
-        height: 100%;
-        align-content: center;
-        transform: translateY(8vh);
-      }
-      .heroStep2, .heroStep3 {
-        opacity: 0;
-        transform: translateY(22px) scale(0.98);
-        filter: blur(6px);
-        will-change: transform, opacity, filter;
-      }
-
-      .heroName {
-        margin: 0;
-        font-family: var(--fontDisplay);
-        font-weight: 950;
-        letter-spacing: 2.4px;
-        text-transform: uppercase;
-        line-height: 0.92;
-        font-size: clamp(70px, 11vw, 138px);
-        text-align: center;
-      }
-
-      .nameFrame {
-        position: relative;
-        display: inline-block;
-        padding: 14px;
-        border-radius: 30px;
-        isolation: isolate;
-      }
-      .nameFrame::before {
-        content: "";
-        position: absolute;
-        inset: -8px;
-        border-radius: 36px;
-        background: conic-gradient(
-          from 210deg,
-          rgba(255, 128, 0,  0.95),
-          rgba(0,   167, 255, 0.90),
-          rgba(255, 154, 53, 0.88),
-          rgba(255, 128, 0,  0.95)
-        );
-        filter: blur(12px);
-        opacity: 0.38;
-        z-index: -1;
-        animation: ringPulse 4s ease-in-out infinite;
-        transition: opacity 1200ms ease, filter 1200ms ease;
-      }
-      .nameFrame::after {
-        content: "";
-        position: absolute;
-        inset: 0;
-        border-radius: 30px;
-        background: rgba(0, 0, 0, 0.25);
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        z-index: -1;
-        box-shadow: 0 26px 90px rgba(0, 0, 0, 0.60);
-      }
-      @keyframes ringPulse {
-        0%,100%{ transform: scale(1);     opacity: 0.32; }
-        50%    { transform: scale(1.035); opacity: 0.54; }
-      }
-      .nameGlow {
-        display: inline-block;
-        padding: 14px 26px;
-        border-radius: 24px;
-        background: rgba(0, 0, 0, 0.18);
-        text-shadow: 0 10px 45px rgba(255, 128, 0, 0.16);
-      }
-
-      .heroHint {
-        display: grid;
-        place-items: center;
-        gap: 2px;
-        color: rgba(238, 244, 255, 0.74);
-        font-weight: 900;
-        letter-spacing: 0.8px;
-        text-transform: uppercase;
-        transition: opacity 220ms ease, transform 220ms ease;
-        user-select: none;
-      }
-      .hintArrow { font-size: 20px; animation: bob 1.1s ease-in-out infinite; }
-      .hintText  { font-size: 12px; opacity: 0.9; }
-      @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
-
-      /* Hero card */
-      .heroCard {
-        width: 100%;
-        border-radius: 28px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background:
-          radial-gradient(900px 420px at 50% 0%, rgba(255, 128, 0, 0.10), transparent 70%),
-          linear-gradient(180deg, rgba(255, 255, 255, 0.10), rgba(255, 255, 255, 0.03));
-        box-shadow: var(--shadow);
-        padding: 26px 20px 22px;
-        text-align: center;
-        backdrop-filter: blur(16px);
-      }
-      .heroKicker {
-        font-family: var(--fontDisplay);
-        font-weight: 950;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: rgba(238, 244, 255, 0.92);
-        font-size: clamp(14px, 1.9vw, 16px);
-      }
-      .heroRoles {
-        margin-top: 10px;
-        font-weight: 900;
-        letter-spacing: 0.9px;
-        text-transform: uppercase;
-        color: var(--papaya);
-        font-size: clamp(12px, 1.6vw, 14px);
-      }
-      .heroActions { display: flex; justify-content: center; gap: 12px; margin-top: 18px; }
-
-      /* Quote pill */
-      .quotePill {
-        width: min(980px, 92vw);
-        text-align: center;
-        padding: 14px 18px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(0, 0, 0, 0.20);
-        color: rgba(238, 244, 255, 0.92);
-        font-weight: 900;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(12px);
-      }
-
-      /* ── Sections ── */
-      .section { padding: 72px 18px; max-width: 1080px; margin: 0 auto; position: relative; z-index: 10; }
-      .sectionHead { margin-bottom: 18px; }
-      .sectionHead.center { text-align: center; }
-      .sectionTitle {
-        margin: 0;
-        font-family: var(--fontDisplay);
-        font-weight: 950;
-        letter-spacing: 0.6px;
-        font-size: 30px;
-      }
-
-      .reveal {
-        opacity: 0;
-        transform: translateY(22px) scale(0.985);
-        filter: blur(6px);
-        transition: opacity 420ms ease, transform 420ms cubic-bezier(.2,.8,.2,1), filter 420ms ease;
-        will-change: transform, opacity, filter;
-      }
-      .reveal.in { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); }
-
-      .tilt { transform-style: preserve-3d; transition: transform 120ms ease, box-shadow 120ms ease; }
-
-      /* ── Projects ── */
-      .projectsSection { position: relative; z-index: 20; isolation: isolate; scroll-margin-top: 92px; }
-      .projectsBay {
-        border-radius: 26px;
-        border: 1px solid rgba(255, 255, 255, 0.10);
-        background:
-          radial-gradient(1100px 340px at 18% 0%, rgba(255, 128, 0, 0.08), transparent 62%),
-          radial-gradient(1100px 340px at 82% 0%, rgba(0, 167, 255, 0.07), transparent 62%),
-          rgba(0, 0, 0, 0.20);
-        box-shadow: 0 32px 120px rgba(0, 0, 0, 0.64);
-        padding: 22px;
         overflow: hidden;
       }
-      .projectsHeader {
-        display: grid;
-        grid-template-columns: 1fr auto;
-        gap: 16px;
-        align-items: start;
-        padding: 10px 10px 18px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-        margin-bottom: 18px;
-      }
-      .projectsTitle {
-        margin: 0;
-        font-family: var(--fontDisplay);
-        font-weight: 950;
-        letter-spacing: 0.6px;
-        font-size: 38px;
-      }
-      .projectsSub { margin: 10px 0 0; color: var(--muted); font-weight: 750; line-height: 1.45; max-width: 62ch; }
-      .projectsHeaderRight { text-align: right; display: grid; gap: 8px; align-content: start; }
-      .projectsKicker {
-        font-family: var(--fontDisplay);
-        font-weight: 950;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        color: rgba(238, 244, 255, 0.92);
-        font-size: 14px;
-      }
-      .projectsRoles {
-        font-weight: 900;
-        letter-spacing: 0.9px;
-        text-transform: uppercase;
-        color: var(--papaya);
-        font-size: 12px;
-      }
-      .projectsIcons { display: flex; justify-content: flex-end; gap: 10px; margin-top: 2px; }
 
-      .projGrid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 14px;
-      }
-      .projCard {
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background:
-          radial-gradient(900px 280px at 18% 0%, rgba(255, 128, 0, 0.07), transparent 60%),
-          radial-gradient(900px 280px at 82% 0%, rgba(0, 167, 255, 0.06), transparent 60%),
-          rgba(0, 0, 0, 0.20);
-        padding: 18px;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
-        transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease;
-      }
-      .projCard:hover {
-        transform: translateY(-2px) scale(1.02);
-        border-color: rgba(255, 128, 0, 0.32);
-        box-shadow: 0 26px 80px rgba(0, 0, 0, 0.65);
-        filter: saturate(1.06);
-      }
-      .projTop { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-      .projTop h3 { margin: 0; font-weight: 950; letter-spacing: 0.2px; }
-      .projTag {
-        font-size: 12px;
-        font-weight: 900;
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(238, 244, 255, 0.78);
-        white-space: nowrap;
-      }
-      .projCard p { margin: 12px 0 0; color: rgba(238, 244, 255, 0.74); line-height: 1.45; font-weight: 700; }
-      .projMeta { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
-      .chip {
-        font-size: 12px;
-        font-weight: 900;
-        padding: 6px 10px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 128, 0, 0.20);
-        background: rgba(255, 128, 0, 0.06);
-        color: rgba(238, 244, 255, 0.80);
-      }
-      .projBtns { display: flex; gap: 10px; margin-top: 14px; flex-wrap: wrap; }
-
-      /* ── Experience ── */
-      .vTimeline { position: relative; margin-top: 18px; padding: 10px 0 0; display: grid; gap: 18px; }
-      .vLine {
+      .hero-step {
         position: absolute;
-        left: 22px; top: 0; bottom: 0;
-        width: 2px;
-        background: linear-gradient(180deg, rgba(255,128,0,0.0), rgba(255,128,0,0.40), rgba(0,167,255,0.22), rgba(255,128,0,0.0));
-        opacity: 0.9;
-      }
-      .vItem {
-        position: relative;
-        padding-left: 54px;
-        transition: transform 150ms ease, filter 150ms ease;
-        will-change: transform;
-      }
-      .vDot {
-        position: absolute;
-        left: 18px; top: 26px;
-        width: 12px; height: 12px;
-        border-radius: 999px;
-        background: var(--papaya);
-        box-shadow: 0 0 0 8px rgba(255,128,0,0.10), 0 0 28px rgba(255,128,0,0.28);
-      }
-      .vCard {
-        border-radius: 20px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background:
-          radial-gradient(900px 260px at 12% 0%, rgba(255, 128, 0, 0.08), transparent 60%),
-          rgba(0, 0, 0, 0.20);
-        padding: 16px 16px 14px;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(12px);
-        transition: border-color 120ms ease, box-shadow 120ms ease, transform 150ms ease;
-      }
-      .vTop { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
-      .vRole { font-weight: 950; }
-      .vTime { color: rgba(238, 244, 255, 0.66); font-weight: 900; font-size: 13px; white-space: nowrap; }
-      .vOrg  { color: var(--papaya); margin-top: 6px; font-weight: 900; }
-      .vNote { color: rgba(238, 244, 255, 0.70); margin-top: 8px; line-height: 1.4; font-weight: 700; }
-
-      .vItem:hover .vCard { border-color: rgba(255, 128, 0, 0.30); box-shadow: 0 24px 70px rgba(0, 0, 0, 0.65); }
-      .vItem.hot { transform: translateY(-8px) scale(1.06); filter: saturate(1.10); }
-      .vItem.hot .vCard { border-color: rgba(255, 128, 0, 0.40); box-shadow: 0 28px 86px rgba(0, 0, 0, 0.72); }
-
-      /* ── About ── */
-      .aboutGrid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 14px; margin-top: 18px; }
-      .card {
-        border-radius: 18px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(0, 0, 0, 0.20);
-        padding: 18px;
-        box-shadow: 0 16px 44px rgba(0, 0, 0, 0.45);
-        backdrop-filter: blur(12px);
-      }
-      .aboutMain { padding: 22px; }
-      .aboutText { margin: 0; color: rgba(238, 244, 255, 0.80); font-weight: 750; line-height: 1.55; font-size: 16px; }
-      .aboutStats { margin-top: 18px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-      .stat {
-        border-radius: 16px;
-        border: 1px solid rgba(255, 128, 0, 0.16);
-        background: rgba(255, 128, 0, 0.05);
-        padding: 14px;
-        text-align: center;
-      }
-      .statNum { font-family: var(--fontDisplay); font-weight: 950; font-size: 22px; color: var(--papaya); }
-      .statLbl { margin-top: 6px; color: rgba(238, 244, 255, 0.70); font-weight: 900; font-size: 12px; text-transform: uppercase; letter-spacing: 0.8px; }
-      .aboutSide { display: grid; gap: 14px; }
-      .mini { padding: 16px; }
-      .miniTitle { font-weight: 950; letter-spacing: 0.2px; }
-      .miniText  { margin-top: 8px; color: rgba(238, 244, 255, 0.72); font-weight: 750; line-height: 1.45; }
-
-      /* ── Contact ── */
-      .contactCenter { margin-top: 18px; display: grid; justify-items: center; gap: 14px; }
-      .ctaMain {
-        width: min(760px, 92vw);
-        display: grid;
-        grid-template-columns: 56px 1fr 44px;
-        align-items: center;
-        gap: 12px;
-        padding: 14px 16px;
-        border-radius: 22px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background:
-          radial-gradient(900px 250px at 20% 0%, rgba(255, 128, 0, 0.14), transparent 60%),
-          radial-gradient(900px 250px at 80% 0%, rgba(0, 167, 255, 0.10), transparent 60%),
-          rgba(0, 0, 0, 0.20);
-        text-decoration: none;
-        color: var(--text);
-        box-shadow: 0 26px 90px rgba(0, 0, 0, 0.55);
-        backdrop-filter: blur(14px);
-        transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease, filter 140ms ease;
-      }
-      .ctaMain:hover { transform: translateY(-2px) scale(1.02); border-color: rgba(255, 128, 0, 0.45); box-shadow: 0 34px 110px rgba(0, 0, 0, 0.70); filter: saturate(1.06); }
-      .ctaIcon {
-        width: 56px; height: 56px;
-        display: grid; place-items: center;
-        border-radius: 16px;
-        background: var(--papaya);
-        color: #0b0f12;
-        font-weight: 950;
-        box-shadow: 0 18px 52px rgba(255, 128, 0, 0.22);
-      }
-      .ctaText   { display: grid; gap: 2px; }
-      .ctaTop    { font-family: var(--fontDisplay); font-weight: 950; letter-spacing: 0.4px; }
-      .ctaBottom { color: rgba(238, 244, 255, 0.72); font-weight: 800; }
-      .ctaArrow {
-        justify-self: end;
-        width: 44px; height: 44px;
-        display: grid; place-items: center;
-        border-radius: 14px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.06);
-        color: rgba(238, 244, 255, 0.92);
-        font-weight: 950;
-      }
-      .contactPills { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
-      .pill {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 14px;
-        border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.14);
-        background: rgba(255, 255, 255, 0.06);
-        text-decoration: none;
-        color: rgba(238, 244, 255, 0.92);
-        font-weight: 900;
-        transition: transform 120ms ease, box-shadow 120ms ease, border-color 120ms ease;
-      }
-      .pill:hover { transform: translateY(-1px) scale(1.06); border-color: rgba(255, 128, 0, 0.38); box-shadow: 0 18px 54px rgba(255, 128, 0, 0.12); }
-      .pillIcon {
-        width: 28px; height: 28px;
-        display: grid; place-items: center;
-        border-radius: 999px;
-        background: rgba(0, 0, 0, 0.22);
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        font-weight: 950;
-      }
-
-      /* ── Footer ── */
-      .footer {
-        max-width: 1080px;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 0 40px 72px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 26px 18px 40px;
-        color: rgba(238, 244, 255, 0.62);
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      /* Step 1 */
+      .step-1 { z-index: 1; }
+
+      .hero-eyebrow {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 20px;
+        opacity: 0;
+        animation: fadeUp 0.6s 0.5s ease forwards;
+      }
+
+      .hero-name {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: clamp(80px, 14vw, 180px);
+        line-height: 0.88;
+        letter-spacing: -3px;
+        text-transform: uppercase;
+        color: var(--text);
+      }
+      .hero-name-line {
+        display: block;
+        opacity: 0;
+        transform: translateY(40px);
+        transition: none;
+      }
+      .hero-name-line.name-in {
+        animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+      }
+      @keyframes slideUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeUp {
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      .hero-hint {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        position: absolute;
+        bottom: 32px;
+        right: 40px;
+        transition: opacity 200ms ease, transform 200ms ease;
+        animation: bob 2s ease-in-out infinite;
+      }
+      .hero-hint span:first-child { font-size: 18px; }
+      @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+
+      /* Step 2 — role card */
+      .step-2, .step-3 {
+        opacity: 0;
+        will-change: transform, opacity, filter;
+      }
+
+      .hero-card {
+        width: 100%;
+        max-width: 720px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+        gap: 40px;
+        padding: 36px 40px;
+        border: 1px solid var(--border);
+        border-left: 3px solid var(--accent);
+        background: rgba(255,255,255,0.03);
+        backdrop-filter: blur(16px);
+        transform-style: preserve-3d;
+        transition: transform 120ms ease;
+      }
+      .hero-card-label {
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 12px;
+      }
+      .hero-card-title {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: clamp(18px, 2.4vw, 26px);
+        line-height: 1.1;
+        letter-spacing: 0.5px;
+        color: var(--text);
+        margin-bottom: 10px;
+      }
+      .hero-card-roles {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--accent);
+        letter-spacing: 1px;
+      }
+      .hero-card-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 8px;
+        flex-shrink: 0;
+      }
+      .hero-card-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 0.5px;
+        transition: color 150ms;
+      }
+      .hero-card-links a:hover { color: var(--accent); }
+
+      /* Step 3 — quote */
+      .hero-quote {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(20px, 3vw, 36px);
+        line-height: 1.3;
+        font-style: italic;
+        color: rgba(255,255,255,0.75);
+        max-width: 820px;
+        border-left: 3px solid var(--accent);
+        padding-left: 28px;
+        transform-style: preserve-3d;
+        transition: transform 120ms ease;
+      }
+      .quote-mark {
+        color: var(--accent);
+        font-style: normal;
+      }
+
+      /* ══════════════════════════════════════
+         SECTIONS
+      ══════════════════════════════════════ */
+      .section {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 120px 40px;
+        border-top: 1px solid var(--border);
+      }
+      .section-header {
+        display: flex;
+        align-items: baseline;
+        gap: 20px;
+        margin-bottom: 64px;
+      }
+      .section-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--accent);
+        flex-shrink: 0;
+      }
+      .section-title {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: clamp(32px, 5vw, 56px);
+        letter-spacing: -1px;
+        line-height: 1;
+      }
+
+      /* reveal animation */
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(4px);
+        transition: opacity 500ms ease, transform 500ms cubic-bezier(0.16,1,0.3,1), filter 500ms ease;
+      }
+      .reveal.in { opacity: 1; transform: translateY(0); filter: none; }
+
+      /* ══════════════════════════════════════
+         PROJECTS
+      ══════════════════════════════════════ */
+      .proj-list { display: flex; flex-direction: column; }
+
+      .proj-item {
+        display: grid;
+        grid-template-columns: 180px 1fr;
+        gap: 40px;
+        padding: 40px 0;
+        border-top: 1px solid var(--border);
+        transition: background 200ms ease;
+      }
+      .proj-item:last-child { border-bottom: 1px solid var(--border); }
+      .proj-item:hover { background: rgba(255,255,255,0.015); }
+
+      .proj-meta {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 4px;
+      }
+      .proj-index {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 13px;
+        color: var(--accent);
+        letter-spacing: 1px;
+      }
+      .proj-tag {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: var(--muted);
+      }
+
+      .proj-name {
+        font-family: var(--font-display);
+        font-weight: 800;
+        font-size: clamp(22px, 3vw, 32px);
+        letter-spacing: -0.5px;
+        margin-bottom: 16px;
+        line-height: 1.1;
+      }
+      .proj-desc {
+        font-size: 15px;
+        font-weight: 400;
+        color: rgba(240,240,240,0.72);
+        line-height: 1.65;
+        max-width: 640px;
+        margin-bottom: 20px;
+      }
+      .proj-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-bottom: 20px;
+      }
+      .proj-chips span {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        padding: 5px 12px;
+        border: 1px solid var(--border);
+        color: var(--muted);
+      }
+      .proj-link {
+        display: inline-block;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        color: var(--accent);
+        border-bottom: 1px solid rgba(255,128,0,0.35);
+        padding-bottom: 2px;
+        transition: border-color 150ms;
+      }
+      .proj-link:hover { border-color: var(--accent); }
+
+      /* ══════════════════════════════════════
+         EXPERIENCE
+      ══════════════════════════════════════ */
+      .exp-list { display: flex; flex-direction: column; }
+
+      .exp-item {
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        gap: 40px;
+        padding: 32px 0;
+        border-top: 1px solid var(--border);
+        transition: background 200ms ease;
+      }
+      .exp-item:last-child { border-bottom: 1px solid var(--border); }
+      .exp-item:hover { background: rgba(255,255,255,0.015); }
+
+      .exp-left { padding-top: 3px; }
+      .exp-time {
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        color: var(--muted);
+      }
+
+      .exp-role {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 1.3;
+        margin-bottom: 6px;
+      }
+      .exp-org {
+        font-size: 13px;
+        font-weight: 600;
+        color: var(--accent);
+        margin-bottom: 10px;
+        letter-spacing: 0.3px;
+      }
+      .exp-note {
+        font-size: 14px;
+        color: rgba(240,240,240,0.60);
+        line-height: 1.55;
+        max-width: 560px;
+      }
+
+      /* ══════════════════════════════════════
+         ABOUT
+      ══════════════════════════════════════ */
+      .about-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+      .about-text p {
+        font-size: 16px;
+        line-height: 1.75;
+        color: rgba(240,240,240,0.75);
+        margin-bottom: 48px;
+      }
+      .about-stats {
+        display: flex;
+        gap: 48px;
+        border-top: 1px solid var(--border);
+        padding-top: 32px;
+      }
+      .stat { display: flex; flex-direction: column; gap: 4px; }
+      .stat-num {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 1;
+        color: var(--accent);
+        letter-spacing: -1px;
+      }
+      .stat-label {
+        font-size: 11px;
+        font-weight: 500;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .about-pillars { display: flex; flex-direction: column; gap: 0; }
+      .pillar {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 24px 0;
+        border-top: 1px solid var(--border);
+      }
+      .pillar:last-child { border-bottom: 1px solid var(--border); }
+      .pillar-label {
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: 15px;
+        letter-spacing: 0.2px;
+      }
+      .pillar-text {
+        font-size: 14px;
+        color: rgba(240,240,240,0.60);
+        line-height: 1.55;
+      }
+
+      /* ══════════════════════════════════════
+         CONTACT
+      ══════════════════════════════════════ */
+      .section--contact {
+        padding-top: 140px;
+        padding-bottom: 140px;
+      }
+      .contact-inner { display: flex; flex-direction: column; gap: 20px; }
+      .contact-heading {
+        font-family: var(--font-display);
+        font-weight: 900;
+        font-size: clamp(48px, 8vw, 100px);
+        letter-spacing: -2px;
+        line-height: 0.95;
+        margin-top: 8px;
+      }
+      .contact-email {
+        display: inline-block;
+        font-family: var(--font-display);
+        font-weight: 700;
+        font-size: clamp(20px, 3vw, 32px);
+        color: var(--accent);
+        border-bottom: 2px solid rgba(255,128,0,0.3);
+        padding-bottom: 3px;
+        margin-top: 16px;
+        transition: border-color 150ms;
+        align-self: flex-start;
+      }
+      .contact-email:hover { border-color: var(--accent); }
+      .contact-links {
+        display: flex;
+        gap: 24px;
+        margin-top: 8px;
+      }
+      .contact-links a {
+        font-size: 13px;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 0.5px;
+        transition: color 150ms;
+      }
+      .contact-links a:hover { color: var(--text); }
+
+      /* ══════════════════════════════════════
+         FOOTER
+      ══════════════════════════════════════ */
+      .footer {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px 40px;
+        border-top: 1px solid var(--border);
         display: flex;
         justify-content: space-between;
-        gap: 12px;
-        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        align-items: center;
+        font-size: 12px;
+        font-weight: 500;
+        color: var(--muted);
+        letter-spacing: 0.5px;
       }
-      .footerLink { color: rgba(238, 244, 255, 0.72); text-decoration: none; font-weight: 900; }
-      .footerLink:hover { color: var(--papaya); }
+      .footer-top { transition: color 150ms; }
+      .footer-top:hover { color: var(--text); }
 
-      /* ── Responsive ── */
-      @media (max-width: 860px) {
-        .navLinks { gap: 10px; }
-        .navLink  { display: none; }
-        .projectsHeader { grid-template-columns: 1fr; }
-        .projectsHeaderRight { text-align: left; }
-        .projectsIcons { justify-content: flex-start; }
-        .projGrid  { grid-template-columns: 1fr; }
-        .aboutGrid { grid-template-columns: 1fr; }
-        .vLine { left: 18px; }
-        .vItem { padding-left: 48px; }
+      /* ══════════════════════════════════════
+         RESPONSIVE
+      ══════════════════════════════════════ */
+      @media (max-width: 768px) {
+        .nav { padding: 0 20px; }
+        .nav-links { display: none; }
+
+        .hero-step { padding: 0 20px 60px; }
+        .hero-hint { right: 20px; }
+        .hero-name { letter-spacing: -2px; }
+
+        .hero-card { flex-direction: column; gap: 24px; padding: 24px 20px; }
+        .hero-card-links { align-items: flex-start; }
+
+        .section { padding: 80px 20px; }
+        .section-header { flex-direction: column; gap: 8px; margin-bottom: 40px; }
+
+        .proj-item { grid-template-columns: 1fr; gap: 16px; }
+        .proj-meta { flex-direction: row; align-items: center; gap: 16px; }
+
+        .exp-item { grid-template-columns: 1fr; gap: 12px; }
+
+        .about-grid { grid-template-columns: 1fr; gap: 48px; }
+        .about-stats { gap: 32px; }
+
+        .footer { padding: 20px; }
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .nameFrame::before { animation: none; }
-        .hintArrow { animation: none; }
+        .hero-name-line, .hero-eyebrow { animation: none; opacity: 1; transform: none; }
+        .hero-hint { animation: none; }
         .reveal { transition: opacity 200ms ease; }
       }
     </style>
