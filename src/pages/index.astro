@@ -20,7 +20,6 @@ const links = {
 
   <body>
 
-    <!-- NAV -->
     <header class="nav">
       <a class="nav-logo" href="#top">RM</a>
       <nav class="nav-links">
@@ -34,18 +33,20 @@ const links = {
 
     <main id="top">
 
-      <!-- ═══════════════════════════════════
-           HERO — sticky scroll staged reveal
-      ══════════════════════════════════════ -->
+      <!-- ══════════════════════════════════
+           HERO — sticky, three steps stacked
+           Steps 2+3 start invisible (opacity:0)
+           JS drives them in on scroll
+      ═══════════════════════════════════════ -->
       <section class="hero-stage" id="heroStage">
         <div class="hero-sticky">
 
-          <!-- Step 1: name -->
+          <!-- Step 1: always present, name fills viewport -->
           <div class="hero-step step-1">
             <div class="hero-eyebrow">Computer Science Graduate · ASU · 4.0 GPA</div>
             <h1 class="hero-name">
-              <span class="hero-name-line" data-line="1">RAJVEER</span>
-              <span class="hero-name-line" data-line="2">MOGAL</span>
+              <span class="hero-name-line n1">RAJVEER</span>
+              <span class="hero-name-line n2">MOGAL</span>
             </h1>
             <div class="hero-hint" id="heroHint">
               <span>↓</span>
@@ -81,9 +82,9 @@ const links = {
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════
+      <!-- ══════════════════════════════════
            PROJECTS
-      ══════════════════════════════════════ -->
+      ═══════════════════════════════════════ -->
       <section class="section" id="projects">
         <div class="section-header reveal" data-reveal>
           <span class="section-label">build log</span>
@@ -91,7 +92,6 @@ const links = {
         </div>
 
         <div class="proj-list">
-
           <article class="proj-item reveal" data-reveal>
             <div class="proj-meta">
               <span class="proj-index">01</span>
@@ -148,13 +148,12 @@ const links = {
               </div>
             </div>
           </article>
-
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════
+      <!-- ══════════════════════════════════
            EXPERIENCE
-      ══════════════════════════════════════ -->
+      ═══════════════════════════════════════ -->
       <section class="section" id="experience">
         <div class="section-header reveal" data-reveal>
           <span class="section-label">timeline</span>
@@ -162,11 +161,8 @@ const links = {
         </div>
 
         <div class="exp-list">
-
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Jan 2026 – Present</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Jan 2026 – Present</span></div>
             <div class="exp-right">
               <div class="exp-role">Teaching Assistant — FSE394: Innovation in Corporate Technology</div>
               <div class="exp-org">ASU Fulton Schools</div>
@@ -175,9 +171,7 @@ const links = {
           </article>
 
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Aug 2025 – Present</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Aug 2025 – Present</span></div>
             <div class="exp-right">
               <div class="exp-role">Grader — FSE301: Entrepreneurship & Value Creation</div>
               <div class="exp-org">ASU Fulton Schools</div>
@@ -186,9 +180,7 @@ const links = {
           </article>
 
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Oct 2025 – Dec 2025</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Oct 2025 – Dec 2025</span></div>
             <div class="exp-right">
               <div class="exp-role">Course Contributor — FSE394: Innovation in Corporate Technology</div>
               <div class="exp-org">ASU Fulton Schools</div>
@@ -197,9 +189,7 @@ const links = {
           </article>
 
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Aug 2025 – Present</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Aug 2025 – Present</span></div>
             <div class="exp-right">
               <div class="exp-role">Robotic Grasp Simulation Intern</div>
               <div class="exp-org">FreeFuse</div>
@@ -208,9 +198,7 @@ const links = {
           </article>
 
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Jan 2024 – Present</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Jan 2024 – Present</span></div>
             <div class="exp-right">
               <div class="exp-role">Undergraduate Research Assistant</div>
               <div class="exp-org">Arizona State University</div>
@@ -219,9 +207,7 @@ const links = {
           </article>
 
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Jan 2025 – May 2025</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Jan 2025 – May 2025</span></div>
             <div class="exp-right">
               <div class="exp-role">Grader — CSE355: Theory of Computational Science</div>
               <div class="exp-org">ASU Fulton Schools</div>
@@ -230,22 +216,19 @@ const links = {
           </article>
 
           <article class="exp-item reveal" data-reveal>
-            <div class="exp-left">
-              <span class="exp-time">Jan 2024 – May 2024</span>
-            </div>
+            <div class="exp-left"><span class="exp-time">Jan 2024 – May 2024</span></div>
             <div class="exp-right">
               <div class="exp-role">Undergraduate Teaching Assistant</div>
               <div class="exp-org">ASU Fulton Schools</div>
               <div class="exp-note">Mentored 150+ students in programming fundamentals and data structures.</div>
             </div>
           </article>
-
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════
+      <!-- ══════════════════════════════════
            ABOUT
-      ══════════════════════════════════════ -->
+      ═══════════════════════════════════════ -->
       <section class="section" id="about">
         <div class="section-header reveal" data-reveal>
           <span class="section-label">background</span>
@@ -254,12 +237,7 @@ const links = {
 
         <div class="about-grid reveal" data-reveal>
           <div class="about-text">
-            <p>
-              I'm a Computer Science graduate from Arizona State University (GPA 4.0) focused on robotics,
-              embodied AI, simulation-driven engineering, and distributed systems. My recent work centers on
-              perception-to-action pipelines, environmental awareness, robotic grasp planning, and large-scale
-              simulation workflows using NVIDIA Isaac Sim and modern AI models.
-            </p>
+            <p>I'm a Computer Science graduate from Arizona State University (GPA 4.0) focused on robotics, embodied AI, simulation-driven engineering, and distributed systems. My recent work centers on perception-to-action pipelines, environmental awareness, robotic grasp planning, and large-scale simulation workflows using NVIDIA Isaac Sim and modern AI models.</p>
             <div class="about-stats">
               <div class="stat">
                 <span class="stat-num">4.0</span>
@@ -293,9 +271,9 @@ const links = {
         </div>
       </section>
 
-      <!-- ═══════════════════════════════════
+      <!-- ══════════════════════════════════
            CONTACT
-      ══════════════════════════════════════ -->
+      ═══════════════════════════════════════ -->
       <section class="section section--contact" id="contact">
         <div class="contact-inner reveal" data-reveal>
           <span class="section-label">let's talk</span>
@@ -316,48 +294,61 @@ const links = {
     </main>
 
     <script>
-      /* ── helpers ───────────────────────── */
       function clamp(n, a, b) { return Math.max(a, Math.min(b, n)); }
 
-      /* ── hero scroll reveal ────────────── */
-      const heroStage = document.getElementById("heroStage");
-      const step2     = document.querySelector('[data-step="2"]');
-      const step3     = document.querySelector('[data-step="3"]');
-      const heroHint  = document.getElementById("heroHint");
+      /* ── Name stagger on load ── */
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".hero-name-line").forEach((el, i) => {
+          setTimeout(() => el.classList.add("visible"), 100 + i * 130);
+        });
+        setTimeout(() => {
+          const ey = document.querySelector(".hero-eyebrow");
+          if (ey) ey.classList.add("visible");
+        }, 60);
+      });
+
+      /* ── Hero staged scroll ── */
+      const stage = document.getElementById("heroStage");
+      const step2 = document.querySelector('[data-step="2"]');
+      const step3 = document.querySelector('[data-step="3"]');
+      const hint  = document.getElementById("heroHint");
 
       function onHeroScroll() {
-        if (!heroStage || !step2 || !step3) return;
-        const r      = heroStage.getBoundingClientRect();
-        const total  = heroStage.offsetHeight - window.innerHeight;
-        const p      = total > 0 ? clamp(-r.top, 0, total) / total : 0;
+        if (!stage || !step2 || !step3) return;
+        const rect   = stage.getBoundingClientRect();
+        const total  = stage.offsetHeight - window.innerHeight;
+        const p      = clamp(-rect.top, 0, total) / (total || 1);
 
+        /* step 2 fades in 20%–42% scroll */
         const s2 = clamp((p - 0.20) / 0.22, 0, 1);
         step2.style.opacity   = s2;
         step2.style.transform = `translateY(${(1 - s2) * 28}px)`;
-        step2.style.filter    = `blur(${(1 - s2) * 5}px)`;
+        step2.style.filter    = `blur(${(1 - s2) * 6}px)`;
 
+        /* step 3 fades in 54%–76% scroll */
         const s3 = clamp((p - 0.54) / 0.22, 0, 1);
         step3.style.opacity   = s3;
         step3.style.transform = `translateY(${(1 - s3) * 28}px)`;
-        step3.style.filter    = `blur(${(1 - s3) * 5}px)`;
+        step3.style.filter    = `blur(${(1 - s3) * 6}px)`;
 
-        if (heroHint) {
-          heroHint.style.opacity   = `${clamp(1 - s2 * 2, 0, 1)}`;
-          heroHint.style.transform = `translateY(${s2 * 12}px)`;
+        /* hint fades as step 2 arrives */
+        if (hint) {
+          hint.style.opacity   = clamp(1 - s2 * 2.5, 0, 1);
+          hint.style.transform = `translateY(${s2 * 12}px)`;
         }
       }
       window.addEventListener("scroll", onHeroScroll, { passive: true });
       window.addEventListener("resize", onHeroScroll);
       onHeroScroll();
 
-      /* ── scroll reveal ─────────────────── */
+      /* ── Section scroll reveal ── */
       const revealIO = new IntersectionObserver(
-        (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); }),
+        entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add("in"); }),
         { threshold: 0.12 }
       );
       document.querySelectorAll("[data-reveal]").forEach(el => revealIO.observe(el));
 
-      /* ── tilt ──────────────────────────── */
+      /* ── Tilt ── */
       document.querySelectorAll("[data-tilt]").forEach(el => {
         let raf = null;
         el.addEventListener("mousemove", e => {
@@ -366,20 +357,12 @@ const links = {
           const py = (e.clientY - r.top)  / r.height;
           if (raf) cancelAnimationFrame(raf);
           raf = requestAnimationFrame(() => {
-            el.style.transform = `perspective(1000px) rotateX(${(0.5 - py) * 10}deg) rotateY(${(px - 0.5) * 14}deg) translateZ(8px)`;
+            el.style.transform = `perspective(1000px) rotateX(${(0.5 - py) * 9}deg) rotateY(${(px - 0.5) * 12}deg) translateZ(6px)`;
           });
         });
         el.addEventListener("mouseleave", () => {
           if (raf) cancelAnimationFrame(raf);
           el.style.transform = "";
-        });
-      });
-
-      /* ── hero name stagger ─────────────── */
-      window.addEventListener("load", () => {
-        document.querySelectorAll("[data-line]").forEach((el, i) => {
-          el.style.animationDelay = `${i * 0.12}s`;
-          el.classList.add("name-in");
         });
       });
     </script>
@@ -389,12 +372,11 @@ const links = {
          TOKENS
       ══════════════════════════════════════ */
       :root {
-        --black:   #080808;
-        --off:     #111111;
-        --border:  rgba(255,255,255,0.10);
-        --muted:   rgba(255,255,255,0.45);
-        --text:    #f0f0f0;
-        --accent:  #FF8000;   /* papaya */
+        --black:  #080808;
+        --border: rgba(255,255,255,0.09);
+        --muted:  rgba(255,255,255,0.42);
+        --text:   #f0f0f0;
+        --accent: #FF8000;
 
         --font-display: "Sora",  ui-sans-serif, system-ui;
         --font-body:    "Inter", ui-sans-serif, system-ui;
@@ -409,8 +391,6 @@ const links = {
         background: var(--black);
         color: var(--text);
         font-family: var(--font-body);
-        font-size: 16px;
-        line-height: 1.6;
         overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
       }
@@ -427,26 +407,23 @@ const links = {
         align-items: center;
         justify-content: space-between;
         padding: 0 40px;
-        height: 64px;
+        height: 60px;
         border-bottom: 1px solid var(--border);
-        background: rgba(8,8,8,0.85);
-        backdrop-filter: blur(12px);
+        background: rgba(8,8,8,0.88);
+        backdrop-filter: blur(14px);
       }
       .nav-logo {
         font-family: var(--font-display);
         font-weight: 900;
-        font-size: 18px;
-        letter-spacing: 2px;
+        font-size: 17px;
+        letter-spacing: 3px;
         color: var(--accent);
       }
-      .nav-links {
-        display: flex;
-        gap: 32px;
-      }
+      .nav-links { display: flex; gap: 28px; }
       .nav-links a {
         font-size: 13px;
         font-weight: 500;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         color: var(--muted);
         transition: color 150ms;
       }
@@ -454,65 +431,65 @@ const links = {
       .nav-cta {
         font-size: 13px;
         font-weight: 600;
-        letter-spacing: 0.5px;
-        padding: 8px 20px;
+        padding: 7px 18px;
         border: 1px solid var(--border);
-        border-radius: 4px;
         color: var(--text);
         transition: border-color 150ms, color 150ms;
       }
       .nav-cta:hover { border-color: var(--accent); color: var(--accent); }
 
       /* ══════════════════════════════════════
-         HERO
+         HERO — THE FIX:
+         hero-sticky is position:sticky + 100vh
+         all three .hero-step are position:absolute
+         over the same inset:0 area, stacked by z-index
       ══════════════════════════════════════ */
       .hero-stage {
         position: relative;
-        height: 200vh;
+        /* 220vh gives scroll room for all three steps */
+        height: 220vh;
       }
+
       .hero-sticky {
         position: sticky;
         top: 0;
         height: 100vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        /* Relative so children's position:absolute is scoped to this */
         overflow: hidden;
       }
 
+      /* Every step fills the sticky viewport */
       .hero-step {
         position: absolute;
         inset: 0;
+        padding: 0 56px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         justify-content: flex-end;
-        padding: 0 40px 72px;
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
-        left: 50%;
-        transform: translateX(-50%);
+        padding-bottom: 72px;
+        will-change: transform, opacity, filter;
       }
 
-      /* Step 1 */
-      .step-1 { z-index: 1; }
+      /* ── Step 1: name ── */
+      .step-1 { z-index: 1; pointer-events: none; }
 
       .hero-eyebrow {
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 500;
-        letter-spacing: 2px;
+        letter-spacing: 2.5px;
         text-transform: uppercase;
         color: var(--accent);
-        margin-bottom: 20px;
+        margin-bottom: 22px;
         opacity: 0;
-        animation: fadeUp 0.6s 0.5s ease forwards;
+        transform: translateY(8px);
+        transition: opacity 0.6s ease, transform 0.6s ease;
       }
+      .hero-eyebrow.visible { opacity: 1; transform: translateY(0); }
 
       .hero-name {
         font-family: var(--font-display);
         font-weight: 900;
-        font-size: clamp(80px, 14vw, 180px);
+        font-size: clamp(72px, 13vw, 170px);
         line-height: 0.88;
         letter-spacing: -3px;
         text-transform: uppercase;
@@ -521,20 +498,16 @@ const links = {
       .hero-name-line {
         display: block;
         opacity: 0;
-        transform: translateY(40px);
-        transition: none;
+        transform: translateY(36px);
+        transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1),
+                    transform 0.7s cubic-bezier(0.16,1,0.3,1);
       }
-      .hero-name-line.name-in {
-        animation: slideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-      }
-      @keyframes slideUp {
-        to { opacity: 1; transform: translateY(0); }
-      }
-      @keyframes fadeUp {
-        to { opacity: 1; transform: translateY(0); }
-      }
+      .hero-name-line.visible { opacity: 1; transform: translateY(0); }
 
       .hero-hint {
+        position: absolute;
+        bottom: 32px;
+        right: 56px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -543,24 +516,24 @@ const links = {
         font-size: 11px;
         letter-spacing: 2px;
         text-transform: uppercase;
-        position: absolute;
-        bottom: 32px;
-        right: 40px;
         transition: opacity 200ms ease, transform 200ms ease;
         animation: bob 2s ease-in-out infinite;
       }
-      .hero-hint span:first-child { font-size: 18px; }
-      @keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
+      .hero-hint span:first-child { font-size: 16px; }
+      @keyframes bob { 0%,100%{transform:translateY(0)} 50%{transform:translateY(7px)} }
 
-      /* Step 2 — role card */
-      .step-2, .step-3 {
-        opacity: 0;
-        will-change: transform, opacity, filter;
+      /* ── Step 2: role card ── */
+      .step-2 {
+        z-index: 2;
+        opacity: 0;            /* JS drives this */
+        pointer-events: none;  /* invisible = non-interactive */
       }
+      /* once visible, allow clicks */
+      .step-2[style*="opacity: 1"],
+      .step-2[style*="opacity:1"] { pointer-events: auto; }
 
       .hero-card {
-        width: 100%;
-        max-width: 720px;
+        width: min(680px, 100%);
         display: flex;
         align-items: flex-end;
         justify-content: space-between;
@@ -568,29 +541,28 @@ const links = {
         padding: 36px 40px;
         border: 1px solid var(--border);
         border-left: 3px solid var(--accent);
-        background: rgba(255,255,255,0.03);
-        backdrop-filter: blur(16px);
+        background: rgba(255,255,255,0.025);
+        backdrop-filter: blur(20px);
         transform-style: preserve-3d;
         transition: transform 120ms ease;
       }
       .hero-card-label {
-        font-size: 11px;
-        letter-spacing: 2px;
+        font-size: 10px;
+        letter-spacing: 2.5px;
         text-transform: uppercase;
         color: var(--muted);
-        margin-bottom: 12px;
+        margin-bottom: 14px;
       }
       .hero-card-title {
         font-family: var(--font-display);
         font-weight: 800;
-        font-size: clamp(18px, 2.4vw, 26px);
-        line-height: 1.1;
-        letter-spacing: 0.5px;
+        font-size: clamp(17px, 2.2vw, 24px);
+        line-height: 1.15;
         color: var(--text);
-        margin-bottom: 10px;
+        margin-bottom: 12px;
       }
       .hero-card-roles {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 500;
         color: var(--accent);
         letter-spacing: 1px;
@@ -599,36 +571,41 @@ const links = {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
-        gap: 8px;
+        gap: 10px;
         flex-shrink: 0;
       }
       .hero-card-links a {
         font-size: 13px;
         font-weight: 500;
         color: var(--muted);
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         transition: color 150ms;
       }
       .hero-card-links a:hover { color: var(--accent); }
 
-      /* Step 3 — quote */
+      /* ── Step 3: quote ── */
+      .step-3 {
+        z-index: 3;
+        opacity: 0;
+        pointer-events: none;
+      }
+      .step-3[style*="opacity: 1"],
+      .step-3[style*="opacity:1"] { pointer-events: auto; }
+
       .hero-quote {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: clamp(20px, 3vw, 36px);
-        line-height: 1.3;
+        font-size: clamp(19px, 2.6vw, 34px);
+        line-height: 1.35;
         font-style: italic;
-        color: rgba(255,255,255,0.75);
+        color: rgba(240,240,240,0.72);
         max-width: 820px;
         border-left: 3px solid var(--accent);
         padding-left: 28px;
         transform-style: preserve-3d;
         transition: transform 120ms ease;
       }
-      .quote-mark {
-        color: var(--accent);
-        font-style: normal;
-      }
+      .quote-mark { color: var(--accent); font-style: normal; }
 
       /* ══════════════════════════════════════
          SECTIONS
@@ -636,7 +613,7 @@ const links = {
       .section {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 120px 40px;
+        padding: 120px 56px;
         border-top: 1px solid var(--border);
       }
       .section-header {
@@ -646,9 +623,9 @@ const links = {
         margin-bottom: 64px;
       }
       .section-label {
-        font-size: 11px;
+        font-size: 10px;
         font-weight: 500;
-        letter-spacing: 2px;
+        letter-spacing: 2.5px;
         text-transform: uppercase;
         color: var(--accent);
         flex-shrink: 0;
@@ -656,17 +633,19 @@ const links = {
       .section-title {
         font-family: var(--font-display);
         font-weight: 900;
-        font-size: clamp(32px, 5vw, 56px);
+        font-size: clamp(32px, 5vw, 52px);
         letter-spacing: -1px;
         line-height: 1;
       }
 
-      /* reveal animation */
+      /* reveal */
       .reveal {
         opacity: 0;
-        transform: translateY(24px);
-        filter: blur(4px);
-        transition: opacity 500ms ease, transform 500ms cubic-bezier(0.16,1,0.3,1), filter 500ms ease;
+        transform: translateY(22px);
+        filter: blur(3px);
+        transition: opacity 500ms ease,
+                    transform 500ms cubic-bezier(0.16,1,0.3,1),
+                    filter 400ms ease;
       }
       .reveal.in { opacity: 1; transform: translateY(0); filter: none; }
 
@@ -674,64 +653,52 @@ const links = {
          PROJECTS
       ══════════════════════════════════════ */
       .proj-list { display: flex; flex-direction: column; }
-
       .proj-item {
         display: grid;
-        grid-template-columns: 180px 1fr;
-        gap: 40px;
-        padding: 40px 0;
+        grid-template-columns: 160px 1fr;
+        gap: 48px;
+        padding: 44px 0;
         border-top: 1px solid var(--border);
-        transition: background 200ms ease;
+        transition: background 200ms;
       }
       .proj-item:last-child { border-bottom: 1px solid var(--border); }
-      .proj-item:hover { background: rgba(255,255,255,0.015); }
+      .proj-item:hover { background: rgba(255,255,255,0.012); }
 
-      .proj-meta {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        padding-top: 4px;
-      }
+      .proj-meta { display: flex; flex-direction: column; gap: 10px; padding-top: 4px; }
       .proj-index {
         font-family: var(--font-display);
         font-weight: 900;
-        font-size: 13px;
+        font-size: 12px;
         color: var(--accent);
-        letter-spacing: 1px;
+        letter-spacing: 1.5px;
       }
       .proj-tag {
         font-size: 11px;
         font-weight: 500;
-        letter-spacing: 0.5px;
         color: var(--muted);
+        letter-spacing: 0.3px;
       }
-
       .proj-name {
         font-family: var(--font-display);
         font-weight: 800;
-        font-size: clamp(22px, 3vw, 32px);
+        font-size: clamp(22px, 3vw, 30px);
         letter-spacing: -0.5px;
-        margin-bottom: 16px;
+        margin-bottom: 14px;
         line-height: 1.1;
       }
       .proj-desc {
         font-size: 15px;
         font-weight: 400;
-        color: rgba(240,240,240,0.72);
-        line-height: 1.65;
-        max-width: 640px;
+        color: rgba(240,240,240,0.65);
+        line-height: 1.7;
+        max-width: 620px;
         margin-bottom: 20px;
       }
-      .proj-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-        margin-bottom: 20px;
-      }
+      .proj-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
       .proj-chips span {
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 0.5px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1px;
         text-transform: uppercase;
         padding: 5px 12px;
         border: 1px solid var(--border);
@@ -741,9 +708,8 @@ const links = {
         display: inline-block;
         font-size: 13px;
         font-weight: 600;
-        letter-spacing: 0.5px;
         color: var(--accent);
-        border-bottom: 1px solid rgba(255,128,0,0.35);
+        border-bottom: 1px solid rgba(255,128,0,0.30);
         padding-bottom: 2px;
         transition: border-color 150ms;
       }
@@ -753,35 +719,33 @@ const links = {
          EXPERIENCE
       ══════════════════════════════════════ */
       .exp-list { display: flex; flex-direction: column; }
-
       .exp-item {
         display: grid;
-        grid-template-columns: 200px 1fr;
-        gap: 40px;
-        padding: 32px 0;
+        grid-template-columns: 180px 1fr;
+        gap: 48px;
+        padding: 34px 0;
         border-top: 1px solid var(--border);
-        transition: background 200ms ease;
+        transition: background 200ms;
       }
       .exp-item:last-child { border-bottom: 1px solid var(--border); }
-      .exp-item:hover { background: rgba(255,255,255,0.015); }
+      .exp-item:hover { background: rgba(255,255,255,0.012); }
 
       .exp-left { padding-top: 3px; }
       .exp-time {
-        font-size: 12px;
+        font-size: 11px;
         font-weight: 500;
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         color: var(--muted);
       }
-
       .exp-role {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 16px;
-        line-height: 1.3;
+        font-size: 15px;
+        line-height: 1.35;
         margin-bottom: 6px;
       }
       .exp-org {
-        font-size: 13px;
+        font-size: 12px;
         font-weight: 600;
         color: var(--accent);
         margin-bottom: 10px;
@@ -789,9 +753,9 @@ const links = {
       }
       .exp-note {
         font-size: 14px;
-        color: rgba(240,240,240,0.60);
-        line-height: 1.55;
-        max-width: 560px;
+        color: rgba(240,240,240,0.55);
+        line-height: 1.6;
+        max-width: 540px;
       }
 
       /* ══════════════════════════════════════
@@ -805,8 +769,8 @@ const links = {
       }
       .about-text p {
         font-size: 16px;
-        line-height: 1.75;
-        color: rgba(240,240,240,0.75);
+        line-height: 1.8;
+        color: rgba(240,240,240,0.70);
         margin-bottom: 48px;
       }
       .about-stats {
@@ -819,20 +783,20 @@ const links = {
       .stat-num {
         font-family: var(--font-display);
         font-weight: 900;
-        font-size: 40px;
+        font-size: 38px;
         line-height: 1;
         color: var(--accent);
         letter-spacing: -1px;
       }
       .stat-label {
-        font-size: 11px;
-        font-weight: 500;
-        letter-spacing: 1.5px;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 2px;
         text-transform: uppercase;
         color: var(--muted);
+        margin-top: 4px;
       }
-
-      .about-pillars { display: flex; flex-direction: column; gap: 0; }
+      .about-pillars { display: flex; flex-direction: column; }
       .pillar {
         display: flex;
         flex-direction: column;
@@ -844,27 +808,23 @@ const links = {
       .pillar-label {
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: 15px;
-        letter-spacing: 0.2px;
+        font-size: 14px;
       }
       .pillar-text {
         font-size: 14px;
-        color: rgba(240,240,240,0.60);
-        line-height: 1.55;
+        color: rgba(240,240,240,0.55);
+        line-height: 1.6;
       }
 
       /* ══════════════════════════════════════
          CONTACT
       ══════════════════════════════════════ */
-      .section--contact {
-        padding-top: 140px;
-        padding-bottom: 140px;
-      }
-      .contact-inner { display: flex; flex-direction: column; gap: 20px; }
+      .section--contact { padding-top: 140px; padding-bottom: 140px; }
+      .contact-inner { display: flex; flex-direction: column; gap: 16px; }
       .contact-heading {
         font-family: var(--font-display);
         font-weight: 900;
-        font-size: clamp(48px, 8vw, 100px);
+        font-size: clamp(48px, 8vw, 96px);
         letter-spacing: -2px;
         line-height: 0.95;
         margin-top: 8px;
@@ -873,25 +833,21 @@ const links = {
         display: inline-block;
         font-family: var(--font-display);
         font-weight: 700;
-        font-size: clamp(20px, 3vw, 32px);
+        font-size: clamp(18px, 2.8vw, 30px);
         color: var(--accent);
-        border-bottom: 2px solid rgba(255,128,0,0.3);
+        border-bottom: 2px solid rgba(255,128,0,0.28);
         padding-bottom: 3px;
         margin-top: 16px;
-        transition: border-color 150ms;
         align-self: flex-start;
+        transition: border-color 150ms;
       }
       .contact-email:hover { border-color: var(--accent); }
-      .contact-links {
-        display: flex;
-        gap: 24px;
-        margin-top: 8px;
-      }
+      .contact-links { display: flex; gap: 24px; margin-top: 6px; }
       .contact-links a {
         font-size: 13px;
         font-weight: 500;
         color: var(--muted);
-        letter-spacing: 0.5px;
+        letter-spacing: 0.3px;
         transition: color 150ms;
       }
       .contact-links a:hover { color: var(--text); }
@@ -902,11 +858,10 @@ const links = {
       .footer {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 24px 40px;
+        padding: 24px 56px;
         border-top: 1px solid var(--border);
         display: flex;
         justify-content: space-between;
-        align-items: center;
         font-size: 12px;
         font-weight: 500;
         color: var(--muted);
@@ -922,31 +877,30 @@ const links = {
         .nav { padding: 0 20px; }
         .nav-links { display: none; }
 
-        .hero-step { padding: 0 20px 60px; }
-        .hero-hint { right: 20px; }
+        .hero-step { padding: 0 24px 60px; }
+        .hero-hint { right: 24px; }
         .hero-name { letter-spacing: -2px; }
-
-        .hero-card { flex-direction: column; gap: 24px; padding: 24px 20px; }
+        .hero-card { flex-direction: column; gap: 20px; padding: 24px 20px; }
         .hero-card-links { align-items: flex-start; }
 
-        .section { padding: 80px 20px; }
+        .section { padding: 80px 24px; }
         .section-header { flex-direction: column; gap: 8px; margin-bottom: 40px; }
 
         .proj-item { grid-template-columns: 1fr; gap: 16px; }
         .proj-meta { flex-direction: row; align-items: center; gap: 16px; }
 
-        .exp-item { grid-template-columns: 1fr; gap: 12px; }
+        .exp-item { grid-template-columns: 1fr; gap: 10px; }
 
         .about-grid { grid-template-columns: 1fr; gap: 48px; }
-        .about-stats { gap: 32px; }
+        .about-stats { gap: 28px; }
 
-        .footer { padding: 20px; }
+        .footer { padding: 20px 24px; }
       }
 
       @media (prefers-reduced-motion: reduce) {
-        .hero-name-line, .hero-eyebrow { animation: none; opacity: 1; transform: none; }
+        .hero-name-line, .hero-eyebrow { transition: none; opacity: 1; transform: none; }
         .hero-hint { animation: none; }
-        .reveal { transition: opacity 200ms ease; }
+        .reveal { transition: opacity 200ms ease; filter: none; }
       }
     </style>
 
