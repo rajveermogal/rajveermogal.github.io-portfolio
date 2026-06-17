@@ -313,33 +313,41 @@ const links = {
       const step3 = document.querySelector('[data-step="3"]');
       const hint  = document.getElementById("heroHint");
 
+      // Force-hide steps 2 & 3 immediately in JS so they're never flash-visible
+      if (step2) { step2.style.opacity = "0"; step2.style.filter = "blur(6px)"; step2.style.transform = "translateY(28px)"; }
+      if (step3) { step3.style.opacity = "0"; step3.style.filter = "blur(6px)"; step3.style.transform = "translateY(28px)"; }
+
       function onHeroScroll() {
         if (!stage || !step2 || !step3) return;
-        const rect   = stage.getBoundingClientRect();
-        const total  = stage.offsetHeight - window.innerHeight;
-        const p      = clamp(-rect.top, 0, total) / (total || 1);
+        const rect  = stage.getBoundingClientRect();
+        const total = stage.offsetHeight - window.innerHeight;
+        if (total <= 0) return; // not laid out yet, skip
+        const p = clamp(-rect.top, 0, total) / total;
 
         /* step 2 fades in 20%–42% scroll */
         const s2 = clamp((p - 0.20) / 0.22, 0, 1);
-        step2.style.opacity   = s2;
+        step2.style.opacity   = String(s2);
         step2.style.transform = `translateY(${(1 - s2) * 28}px)`;
         step2.style.filter    = `blur(${(1 - s2) * 6}px)`;
+        step2.style.pointerEvents = s2 > 0.5 ? "auto" : "none";
 
         /* step 3 fades in 54%–76% scroll */
         const s3 = clamp((p - 0.54) / 0.22, 0, 1);
-        step3.style.opacity   = s3;
+        step3.style.opacity   = String(s3);
         step3.style.transform = `translateY(${(1 - s3) * 28}px)`;
         step3.style.filter    = `blur(${(1 - s3) * 6}px)`;
+        step3.style.pointerEvents = s3 > 0.5 ? "auto" : "none";
 
         /* hint fades as step 2 arrives */
         if (hint) {
-          hint.style.opacity   = clamp(1 - s2 * 2.5, 0, 1);
+          hint.style.opacity   = String(clamp(1 - s2 * 2.5, 0, 1));
           hint.style.transform = `translateY(${s2 * 12}px)`;
         }
       }
       window.addEventListener("scroll", onHeroScroll, { passive: true });
       window.addEventListener("resize", onHeroScroll);
-      onHeroScroll();
+      // Run after layout is complete
+      requestAnimationFrame(() => requestAnimationFrame(onHeroScroll));
 
       /* ── Section scroll reveal ── */
       const revealIO = new IntersectionObserver(
@@ -525,12 +533,9 @@ const links = {
       /* ── Step 2: role card ── */
       .step-2 {
         z-index: 2;
-        opacity: 0;            /* JS drives this */
-        pointer-events: none;  /* invisible = non-interactive */
+        opacity: 0;
+        pointer-events: none;
       }
-      /* once visible, allow clicks */
-      .step-2[style*="opacity: 1"],
-      .step-2[style*="opacity:1"] { pointer-events: auto; }
 
       .hero-card {
         width: min(680px, 100%);
@@ -589,8 +594,6 @@ const links = {
         opacity: 0;
         pointer-events: none;
       }
-      .step-3[style*="opacity: 1"],
-      .step-3[style*="opacity:1"] { pointer-events: auto; }
 
       .hero-quote {
         font-family: var(--font-display);
